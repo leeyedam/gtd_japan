@@ -133,7 +133,7 @@ function FourthSection() {
                   maxHeight: { xs: "100%", sm: "100%", md: "830px" },
                   maxWidth: { xs: "100%", sm: "100%", md: "100%" },
                 }}
-                src="images/slide/17.jpg"
+                src="images/slide/17.Webp"
                 alt="gtd"
               />
             </Card>
@@ -192,7 +192,7 @@ export default FourthSection;
 
 const itemData = [
   {
-    img: "images/slide/1.jpg",
+    img: "images/slide/1.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -200,7 +200,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/2.jpg",
+    img: "images/slide/2.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -208,7 +208,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/3.jpg",
+    img: "images/slide/3.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -216,7 +216,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/4.jpg",
+    img: "images/slide/4.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -224,7 +224,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/7.jpg",
+    img: "images/slide/7.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -232,7 +232,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/8.jpg",
+    img: "images/slide/8.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -240,7 +240,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/1.jpg",
+    img: "images/slide/1.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -248,7 +248,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/2.jpg",
+    img: "images/slide/2.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -256,7 +256,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/3.jpg",
+    img: "images/slide/3.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -264,7 +264,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/4.jpg",
+    img: "images/slide/4.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -272,7 +272,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/7.jpg",
+    img: "images/slide/7.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,
@@ -280,7 +280,7 @@ const itemData = [
     featured: true,
   },
   {
-    img: "images/slide/8.jpg",
+    img: "images/slide/8.Webp",
     title: "Gtd",
     author: "@bkristastucchio",
     rows: 2,

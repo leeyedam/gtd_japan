@@ -119,7 +119,7 @@ function SecondSection() {
                   maxHeight: { xs: "100%", sm: "100%", md: "800px" },
                   maxWidth: { xs: "100%", sm: "100%", md: "100%" },
                 }}
-                src="images/slide/12.jpg"
+                src="images/slide/12.Webp"
                 alt="gtd"
               />
             </Card>

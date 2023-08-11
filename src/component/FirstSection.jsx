@@ -63,8 +63,9 @@ function FirstSection() {
               width: { xs: "0%", sm: "0%", md: "100%" },
               objectFit: "cover",
             }}
-            src="images/slide/1.jpg"
+            src="images/slide/1.Webp"
             alt="gtd"
+            fetchpriority="high"
           />
           <Box
             component="img"
@@ -74,8 +75,9 @@ function FirstSection() {
               objectFit: "cover",
               objectPosition: "41% 50%",
             }}
-            src="images/slide/1_sm.jpg"
+            src="images/slide/1_sm.Webp"
             alt="gtd"
+            fetchpriority="high"
           />
         </Box>
         <Box
@@ -108,8 +110,9 @@ function FirstSection() {
               width: { xs: "100%", sm: "100%", md: "100%" },
               objectFit: "cover",
             }}
-            src="images/slide/10.jpg"
+            src="images/slide/10.Webp"
             alt="gtd"
+            fetchpriority="high"
           />
         </Box>
         <Box
@@ -143,8 +146,9 @@ function FirstSection() {
               width: { xs: "100%", sm: "100%", md: "100%" },
               objectFit: "cover",
             }}
-            src="images/slide/3.jpg"
+            src="images/slide/3.Webp"
             alt="gtd"
+            fetchpriority="high"
           />
         </Box>
       </Slider>
