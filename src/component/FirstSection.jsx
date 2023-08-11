@@ -59,8 +59,8 @@ function FirstSection() {
           <Box
             component="img"
             sx={{
-              height: { xs: "0%", sm: "0%", md: "100%" },
-              width: { xs: "0%", sm: "0%", md: "100%" },
+              height: { xs: "0px", sm: "0px", md: "100vh" },
+              width: { xs: "0px", sm: "0px", md: "100vw" },
               objectFit: "cover",
             }}
             src="images/slide/1.Webp"
@@ -70,8 +70,8 @@ function FirstSection() {
           <Box
             component="img"
             sx={{
-              height: { xs: "100%", sm: "100%", md: "0%" },
-              width: { xs: "100%", sm: "100%", md: "0%" },
+              height: { xs: "100vh", sm: "100vh", md: "0px" },
+              width: { xs: "100vw", sm: "100vw", md: "0px" },
               objectFit: "cover",
               objectPosition: "41% 50%",
             }}
@@ -106,8 +106,8 @@ function FirstSection() {
           <Box
             component="img"
             sx={{
-              height: { xs: "100%", sm: "100%", md: "100%" },
-              width: { xs: "100%", sm: "100%", md: "100%" },
+              height: { xs: "100vh", sm: "100vh", md: "100vh" },
+              width: { xs: "100vw", sm: "100vw", md: "100vw" },
               objectFit: "cover",
             }}
             src="images/slide/10.Webp"
@@ -142,8 +142,8 @@ function FirstSection() {
           <Box
             component="img"
             sx={{
-              height: { xs: "100%", sm: "100%", md: "100%" },
-              width: { xs: "100%", sm: "100%", md: "100%" },
+              height: { xs: "100vh", sm: "100vh", md: "100vh" },
+              width: { xs: "100vw", sm: "100vw", md: "100vw" },
               objectFit: "cover",
             }}
             src="images/slide/3.Webp"

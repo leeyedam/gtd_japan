@@ -1,3 +1,4 @@
+import { useEffect, lazy } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./App.css";
@@ -5,10 +6,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "./component/Header";
 import FirstSection from "./component/FirstSection";
-import SecondSection from "./component/SecondSection";
-import { useEffect } from "react";
-import ThirdSection from "./component/ThirdSection";
-import FourthSection from "./component/FourthSection";
+const SecondSection = lazy(() => import("./component/SecondSection"));
+const ThirdSection = lazy(() => import("./component/ThirdSection"));
+const FourthSection = lazy(() => import("./component/FourthSection"));
 
 function App() {
   useEffect(() => {
