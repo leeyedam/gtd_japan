@@ -56,7 +56,7 @@ function FourthSection() {
             justifyContent: { xs: "center", sm: "center", md: "space-between" },
             alignItems: "center",
             marginTop: { xs: "100px", sm: "130px", md: "130px" },
-            marginBottom: { xs: "10px", sm: "80px", md: "140px" },
+            marginBottom: { xs: "10px", sm: "80px", md: "70px" },
           }}
         >
           <Grid item xs={12} sm={12} md={6}>

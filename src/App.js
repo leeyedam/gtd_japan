@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "./component/Header";
 import FirstSection from "./component/FirstSection";
+import Footer from "./component/Footer";
 const SecondSection = lazy(() => import("./component/SecondSection"));
 const ThirdSection = lazy(() => import("./component/ThirdSection"));
 const FourthSection = lazy(() => import("./component/FourthSection"));
@@ -23,6 +24,7 @@ function App() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
+      <Footer />
     </div>
   );
 }
