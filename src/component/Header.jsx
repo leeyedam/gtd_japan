@@ -112,11 +112,7 @@ function Header() {
               }}
             >
               {left.map((page) => (
-                <MenuItem
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ backgroundColor: "transparent" }}
-                >
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" color="#fff">
                     {page}
                   </Typography>
