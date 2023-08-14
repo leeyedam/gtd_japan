@@ -24,7 +24,8 @@ function Footer() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1800,
+        lg: 1200,
+        xl: 1800,
       },
     },
   });
@@ -61,7 +62,12 @@ function Footer() {
               sm={12}
               md={7}
               sx={{
-                paddingLeft: { sm: "40px", md: "350px", lg: "400px" },
+                paddingLeft: {
+                  sm: "40px",
+                  md: "350px",
+                  lg: "400px",
+                  xl: "450px",
+                },
                 textAlign: "left",
               }}
             >
@@ -161,8 +167,9 @@ function Footer() {
               sm={12}
               md={5}
               sx={{
-                paddingLeft: { md: "30px" },
+                paddingLeft: { md: "30px", lg: "0px" },
                 display: { xs: "none", md: "flex" },
+                flexDirection: { md: "column" },
               }}
             >
               <Typography

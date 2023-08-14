@@ -18,7 +18,8 @@ function ThirdSection() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1800,
+        lg: 1200,
+        xl: 1800,
       },
     },
   });
@@ -54,10 +55,16 @@ function ThirdSection() {
               xs={10}
               sm={12}
               md={7}
+              lg={8}
               data-aos="fade-up"
               data-aos-delay="300"
               sx={{
-                paddingLeft: { sm: "60px", md: "360px", lg: "400px" },
+                paddingLeft: {
+                  sm: "60px",
+                  md: "360px",
+                  lg: "400px",
+                  xl: "480px",
+                },
                 textAlign: "left",
               }}
             >

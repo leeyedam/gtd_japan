@@ -38,7 +38,8 @@ function FirstSection() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1800,
+        lg: 1200,
+        xl: 1800,
       },
     },
   });
@@ -59,7 +60,7 @@ function FirstSection() {
               zIndex="3"
               sx={{
                 top: { xs: "65%", sm: "62%", md: "33%" },
-                left: { xs: "55%", sm: "56%", md: "76%", lg: "77%" },
+                left: { xs: "55%", sm: "56%", md: "76%", lg: "77%", xl: "80%" },
               }}
             >
               <Typography className="title" variant="h1" sx={titleTextStyle}>
@@ -182,4 +183,4 @@ function FirstSection() {
   );
 }
 
-export default FirstSection;
+export default React.memo(FirstSection);
