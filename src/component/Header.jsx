@@ -17,8 +17,16 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import { Icon } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-const left = ["BRAND", "FITTING", "ACCESSORIES"];
-const right = ["GUARANTEE", "LOGIN", "SIGNUP"];
+const left = [
+  { name: "BRAND", link: "/brand" },
+  { name: "FITTING", link: "/" },
+  { name: "ACCESSORIES", link: "/" },
+];
+const right = [
+  { name: "GUARANTEE", link: "/" },
+  { name: "LOGIN", link: "/" },
+  { name: "SIGNUP", link: "/" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const useStyles = makeStyles({
   root: {
@@ -112,20 +120,20 @@ function Header() {
               }}
             >
               {left.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" color="#fff">
-                    {page}
+                    {page.name}
                   </Typography>
                 </MenuItem>
               ))}
               {right.map((page) => (
                 <MenuItem
-                  key={page}
+                  key={page.name}
                   onClick={handleCloseNavMenu}
                   sx={{ backgroundColor: "transparent" }}
                 >
                   <Typography textAlign="center" color="#fff">
-                    {page}
+                    {page.name}
                   </Typography>
                 </MenuItem>
               ))}
@@ -156,11 +164,12 @@ function Header() {
           >
             {left.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                component="a"
+                href={page.link}
+                key={page.name}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
             <Typography
@@ -179,11 +188,13 @@ function Header() {
             </Typography>
             {right.map((page) => (
               <Button
-                key={page}
+                component="a"
+                href={page.link}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>

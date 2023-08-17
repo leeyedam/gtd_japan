@@ -224,7 +224,7 @@ function SecondSection() {
             </Typography>
             <Typography
               component="a"
-              href="#"
+              href="/brand"
               sx={{
                 display: { xs: "none", md: "flex" },
                 fontSize: { xs: "12px", sm: "16px", md: "18px" },

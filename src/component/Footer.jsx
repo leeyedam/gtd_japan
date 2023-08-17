@@ -130,15 +130,13 @@ function Footer() {
                   {idx !== 2 && (
                     <Typography
                       component="span"
-                      sx={{
-                        ...infoTextStyle,
-                        marginLeft: { xs: "flex", sm: "flex", md: "20px" },
-                      }}
+                      sx={infoTextStyle}
                       style={{
                         fontFamily: "NanumSquareNeo-Variable",
                         fontWeight: 700,
                         color: "#626262",
                         textDecoration: "none",
+                        marginLeft: "20px",
                       }}
                     >
                       |
