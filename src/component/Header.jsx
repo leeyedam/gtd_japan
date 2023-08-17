@@ -16,6 +16,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import { Icon } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { Link } from "react-router-dom";
 
 const left = [
   { name: "BRAND", link: "/brand" },
@@ -164,12 +165,10 @@ function Header() {
           >
             {left.map((page) => (
               <Button
-                component="a"
-                href={page.link}
                 key={page.name}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page.name}
+                <Link to={page.link}>{page.name}</Link>
               </Button>
             ))}
             <Typography
@@ -188,13 +187,10 @@ function Header() {
             </Typography>
             {right.map((page) => (
               <Button
-                component="a"
-                href={page.link}
                 key={page.name}
-                onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page.name}
+                <Link to={page.link}>{page.name}</Link>
               </Button>
             ))}
           </Box>

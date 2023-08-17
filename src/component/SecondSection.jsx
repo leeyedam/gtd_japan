@@ -7,6 +7,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function SecondSection() {
   const titleTextStyle = {
@@ -223,8 +224,6 @@ function SecondSection() {
               만드는 것이 GTD의 개발 목표이다.
             </Typography>
             <Typography
-              component="a"
-              href="/brand"
               sx={{
                 display: { xs: "none", md: "flex" },
                 fontSize: { xs: "12px", sm: "16px", md: "18px" },
@@ -232,11 +231,10 @@ function SecondSection() {
               }}
               style={{
                 fontFamily: "NanumSquareNeo-Variable",
-                color: "#626262",
                 textAlign: "left",
               }}
             >
-              Detail View
+              <Link to="/brand"> Detail View</Link>
             </Typography>
           </Grid>
         </Grid>
