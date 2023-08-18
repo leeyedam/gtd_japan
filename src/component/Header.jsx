@@ -8,27 +8,11 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import { Icon } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Link, useNavigate } from "react-router-dom";
 
-const left = [
-  { name: "BRAND", link: "/brand" },
-  { name: "FITTING", link: "/" },
-  { name: "ACCESSORIES", link: "/" },
-];
-const right = [
-  { name: "GUARANTEE", link: "/" },
-  { name: "LOGIN", link: "/" },
-  { name: "SIGNUP", link: "/" },
-];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const useStyles = makeStyles({
   root: {
     backgroundColor: "#000",
@@ -36,12 +20,28 @@ const useStyles = makeStyles({
 });
 
 function Header() {
-  const classes = useStyles();
+  const left = [
+    { name: "BRAND", link: "/brand" },
+    { name: "FITTING", link: "/" },
+    { name: "ACCESSORIES", link: "/" },
+  ];
+  const right = [
+    { name: "GUARANTEE", link: "/" },
+    { name: "LOGIN", link: "/" },
+    { name: "SIGNUP", link: "/" },
+  ];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [navSize, setnavSize] = useState("4rem");
   const [navColor, setnavColor] = useState("transparent");
   const [navTypoColor, setNavTypoColor] = useState("#fff");
+  const buttonStyle = { my: 2, color: "white", display: "block" };
+  const logoTextStyle = {
+    mr: 2,
+    display: { xs: "none", md: "flex" },
+    height: "40px",
+    textDecoration: "none",
+  };
 
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor("#292929") : setnavColor("transparent");
@@ -149,12 +149,7 @@ function Header() {
               textAlign={"center"}
               component="a"
               href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                height: "40px",
-                textDecoration: "none",
-              }}
+              sx={logoTextStyle}
             >
               <img src="images/logo.png" alt="logo" />
             </Typography>
@@ -168,10 +163,7 @@ function Header() {
             }}
           >
             {left.map((page) => (
-              <Button
-                key={page.name}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
+              <Button key={page.name} sx={buttonStyle}>
                 <Link to={page.link}>{page.name}</Link>
               </Button>
             ))}
@@ -180,20 +172,14 @@ function Header() {
               component="a"
               href="/"
               sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
+                ...logoTextStyle,
                 marginTop: "14px",
-                height: "40px",
-                textDecoration: "none",
               }}
             >
               <img src="images/logo.png" alt="logo" />
             </Typography>
             {right.map((page) => (
-              <Button
-                key={page.name}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
+              <Button key={page.name} sx={buttonStyle}>
                 <Link to={page.link}>{page.name}</Link>
               </Button>
             ))}

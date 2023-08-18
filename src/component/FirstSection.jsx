@@ -1,8 +1,8 @@
 import Slider from "react-slick";
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import { Box, Divider, Typography } from "@mui/material";
+import React from "react";
+import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import FirstSectionText from "./FirstSectionText";
 
 function FirstSection() {
   const settings = {
@@ -16,20 +16,11 @@ function FirstSection() {
     pauseOnHover: false,
     dotsClass: "slick-dots",
   };
-  const [visible, setVisible] = useState(true);
-  const [firstStart, setFirstStart] = useState("fade-up");
-  let currentIndex = 0;
-  const titleTextStyle = {
-    fontSize: { xs: "40px", sm: "76px", md: "96px" },
-    textAlign: { xs: "right", sm: "right" },
-  };
-  const subTitleTextStyle = {
-    fontSize: { xs: "18px", sm: "22px", md: "25px" },
-    textAlign: { xs: "right", sm: "right" },
-  };
 
-  const listenScrollEvent = () => {
-    window.scrollY > 10 ? setVisible(false) : setVisible(true);
+  const slideImageStyle = {
+    height: "100vh",
+    width: "100vw",
+    objectFit: "cover",
   };
 
   const theme = createTheme({
@@ -44,36 +35,17 @@ function FirstSection() {
     },
   });
 
-  useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
-    return () => {
-      window.removeEventListener("scroll", listenScrollEvent);
-    };
-  }, []);
   return (
     <ThemeProvider theme={theme}>
       <div className="first-section">
         <Slider {...settings}>
           <Box position="relative" align="center" width="100vw" height="100vh">
-            <Box
-              position="absolute"
-              zIndex="3"
-              sx={{
-                top: { xs: "65%", sm: "62%", md: "33%" },
-                left: { xs: "55%", sm: "56%", md: "76%", lg: "77%", xl: "80%" },
-              }}
-            >
-              <Typography className="title" variant="h1" sx={titleTextStyle}>
-                FITTING
-              </Typography>
-              <Typography
-                className="detail"
-                variant="h3"
-                sx={subTitleTextStyle}
-              >
-                Detail View
-              </Typography>
-            </Box>
+            <FirstSectionText
+              title="FITTING"
+              top={{ xs: "65%", sm: "62%", md: "33%" }}
+              left={{ xs: "55%", sm: "56%", md: "76%", lg: "77%", xl: "80%" }}
+              width={{ md: "none" }}
+            />
             <Box
               component="img"
               sx={{
@@ -105,33 +77,15 @@ function FirstSection() {
             width="100vw"
             height="100vh"
           >
-            <Box
-              position="absolute"
-              zIndex="3"
-              sx={{
-                top: { xs: "65%", sm: "62%", md: "33%" },
-                left: { xs: "25%", sm: "28%", md: "56%", lg: "56.5%" },
-                width: { md: "40%" },
-              }}
-            >
-              <Typography className="title" variant="h1" sx={titleTextStyle}>
-                ACCESSORIES
-              </Typography>
-              <Typography
-                className="detail"
-                variant="h3"
-                sx={subTitleTextStyle}
-              >
-                Detail View
-              </Typography>
-            </Box>
+            <FirstSectionText
+              title="ACCESSORIES"
+              top={{ xs: "65%", sm: "62%", md: "33%" }}
+              left={{ xs: "25%", sm: "28%", md: "56%", lg: "56.5%" }}
+              width={{ md: "40%" }}
+            />
             <Box
               component="img"
-              sx={{
-                height: { xs: "100vh", sm: "100vh", md: "100vh" },
-                width: { xs: "100vw", sm: "100vw", md: "100vw" },
-                objectFit: "cover",
-              }}
+              sx={slideImageStyle}
               src="images/slide/10.Webp"
               alt="gtd"
               fetchpriority="high"
@@ -144,34 +98,15 @@ function FirstSection() {
             width="100vw"
             height="100vh"
           >
-            <Box
-              data-aos="fade-up"
-              position="absolute"
-              zIndex="3"
-              sx={{
-                top: { xs: "66%", sm: "62%", md: "33%" },
-                left: { xs: "33%", sm: "35%", md: "56%" },
-                width: { md: "40%" },
-              }}
-            >
-              <Typography className="title" variant="h1" sx={titleTextStyle}>
-                GUARANTEE
-              </Typography>
-              <Typography
-                className="detail"
-                variant="h3"
-                sx={subTitleTextStyle}
-              >
-                Detail View
-              </Typography>
-            </Box>
+            <FirstSectionText
+              title="GUARANTEE"
+              top={{ xs: "66%", sm: "62%", md: "33%" }}
+              left={{ xs: "33%", sm: "35%", md: "56%" }}
+              width={{ md: "40%" }}
+            />
             <Box
               component="img"
-              sx={{
-                height: { xs: "100vh", sm: "100vh", md: "100vh" },
-                width: { xs: "100vw", sm: "100vw", md: "100vw" },
-                objectFit: "cover",
-              }}
+              sx={slideImageStyle}
               src="images/slide/3.Webp"
               alt="gtd"
               fetchpriority="high"

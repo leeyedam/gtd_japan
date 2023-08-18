@@ -2,25 +2,12 @@ import React from "react";
 import {
   Box,
   Card,
-  CardActions,
-  CardContent,
   Grid,
-  IconButton,
   ImageList,
   ImageListItem,
   ImageListItemBar,
-  ListSubheader,
   Typography,
 } from "@mui/material";
-
-function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
 
 function FourthSection() {
   const titleTextStyle = {
@@ -166,18 +153,7 @@ function FourthSection() {
                     alt={item.title}
                     loading="lazy"
                   />
-                  <ImageListItemBar
-                    title={item.title}
-                    subtitle={item.author}
-                    // actionIcon={
-                    //   <IconButton
-                    //     sx={{ color: "rgba(255, 255, 255, 0.54)" }}
-                    //     aria-label={`info about ${item.title}`}
-                    //   >
-                    //     <InfoIcon />
-                    //   </IconButton>
-                    // }
-                  />
+                  <ImageListItemBar title={item.title} subtitle={item.author} />
                 </ImageListItem>
               ))}
             </ImageList>

@@ -12,11 +12,27 @@ function Footer() {
     fontSize: { xs: "12px", sm: "16px", md: "14px" },
     textAlign: { xs: "left", sm: "left", md: "left" },
     fontWeight: { sm: 700 },
+    fontFamily: {
+      xs: "NanumBarunGothic",
+      sm: "NanumBarunGothic",
+      md: "NanumSquareNeo-Variable",
+    },
   };
   const titleTextStyle = {
     fontSize: { xs: "16px", sm: "20px", md: "22px" },
     textAlign: { xs: "left", sm: "left", md: "left" },
     fontWeight: { sm: 900 },
+    fontFamily: {
+      xs: "NanumBarunGothic",
+      sm: "NanumBarunGothic",
+      md: "NanumSquareNeo-Variable",
+    },
+  };
+  const defaultTextStyle = {
+    textAlign: "left",
+    fontWeight: 700,
+    color: "#626262",
+    textDecoration: "none",
   };
   const theme = createTheme({
     breakpoints: {
@@ -71,25 +87,8 @@ function Footer() {
                 textAlign: "left",
               }}
             >
-              {/* <Box
-              className="img"
-              component="img"
-              sx={{
-                maxHeight: { xs: "80px", sm: "150px" },
-                maxWidth: { sm: "150px" },
-              }}
-              src="images/logo.png"
-              alt="gtd"
-            /> */}
               <Typography
-                sx={{
-                  ...titleTextStyle,
-                  fontFamily: {
-                    xs: "NanumBarunGothic",
-                    sm: "NanumBarunGothic",
-                    md: "NanumSquareNeo-Variable",
-                  },
-                }}
+                sx={titleTextStyle}
                 style={{
                   fontWeight: 700,
                   color: "#626262",
@@ -102,11 +101,6 @@ function Footer() {
                   ...infoTextStyle,
                   marginTop: { xs: "10px", sm: "10px", md: "15px" },
                   marginBottom: { xs: "flex", sm: "flex", md: "20px" },
-                  fontFamily: {
-                    xs: "NanumBarunGothic",
-                    sm: "NanumBarunGothic",
-                    md: "NanumSquareNeo-Variable",
-                  },
                 }}
                 style={{
                   fontWeight: 700,
@@ -115,8 +109,7 @@ function Footer() {
               >
                 회사명 : 주식회사 지티디코리아
                 <br /> 대표자 : 김 위 중
-                <br /> 사업자등록번호 : 10111—8326161 통신판매업신고번호 :
-                제2022-경기하남-2782호
+                <br /> 사업자등록번호 : 110111—8326161
                 <br /> 주소 : 경기도 하남시 미사강변한강로 135, 제다동 제6층
                 644호 (망월동, 미사강변스카이폴리스지식산업센터)
               </Typography>
@@ -130,7 +123,6 @@ function Footer() {
                     marginRight: "20px",
                   }}
                   style={{
-                    fontFamily: "NanumSquareNeo-Variable",
                     fontWeight: 700,
                     color: "#626262",
                     textDecoration: "none",
@@ -142,11 +134,6 @@ function Footer() {
                       component="span"
                       sx={{
                         ...infoTextStyle,
-                        fontFamily: {
-                          xs: "NanumBarunGothic",
-                          sm: "NanumBarunGothic",
-                          md: "NanumSquareNeo-Variable",
-                        },
                       }}
                       style={{
                         fontWeight: 700,
@@ -164,17 +151,8 @@ function Footer() {
                 sx={{
                   ...infoTextStyle,
                   marginTop: { xs: "flex", sm: "flex", md: "20px" },
-                  fontFamily: {
-                    xs: "NanumBarunGothic",
-                    sm: "NanumBarunGothic",
-                    md: "NanumSquareNeo-Variable",
-                  },
                 }}
-                style={{
-                  fontWeight: 700,
-                  color: "#626262",
-                  textDecoration: "none",
-                }}
+                style={defaultTextStyle}
               >
                 Copyright © 2020 지티디코리아 All rights reserved.
               </Typography>
@@ -185,20 +163,13 @@ function Footer() {
               sm={12}
               md={5}
               sx={{
-                paddingLeft: { md: "30px", lg: "0px" },
                 display: { xs: "none", md: "flex" },
+                paddingLeft: { md: "30px", lg: "0px" },
                 flexDirection: { md: "column" },
               }}
             >
               <Typography
-                sx={{
-                  ...titleTextStyle,
-                  fontFamily: {
-                    xs: "NanumBarunGothic",
-                    sm: "NanumBarunGothic",
-                    md: "NanumSquareNeo-Variable",
-                  },
-                }}
+                sx={titleTextStyle}
                 style={{
                   fontWeight: 700,
                   color: "#626262",
@@ -211,35 +182,19 @@ function Footer() {
                   marginTop: { md: "15px" },
                   fontSize: { md: "24px" },
                   fontFamily: {
-                    xs: "NanumBarunGothic",
-                    sm: "NanumBarunGothic",
                     md: "NanumSquareNeo-Variable",
                   },
                 }}
-                style={{
-                  textAlign: "left",
-                  fontWeight: 700,
-                  color: "#626262",
-                  textDecoration: "none",
-                }}
+                style={defaultTextStyle}
               >
-                031-8028-0395
+                070-4286-1170
               </Typography>
               <Typography
                 sx={{
                   ...infoTextStyle,
                   marginTop: { md: "10px" },
-                  fontFamily: {
-                    xs: "NanumBarunGothic",
-                    sm: "NanumBarunGothic",
-                    md: "NanumSquareNeo-Variable",
-                  },
                 }}
-                style={{
-                  fontWeight: 700,
-                  color: "#626262",
-                  textDecoration: "none",
-                }}
+                style={defaultTextStyle}
               >
                 평일 am 9:00 – pm 6:00
               </Typography>
