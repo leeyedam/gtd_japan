@@ -82,9 +82,15 @@ function Footer() {
               alt="gtd"
             /> */}
               <Typography
-                sx={titleTextStyle}
+                sx={{
+                  ...titleTextStyle,
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
+                }}
                 style={{
-                  fontFamily: "NanumSquareNeo-Variable",
                   fontWeight: 700,
                   color: "#626262",
                 }}
@@ -96,9 +102,13 @@ function Footer() {
                   ...infoTextStyle,
                   marginTop: { xs: "10px", sm: "10px", md: "15px" },
                   marginBottom: { xs: "flex", sm: "flex", md: "20px" },
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
                 }}
                 style={{
-                  fontFamily: "NanumSquareNeo-Variable",
                   fontWeight: 700,
                   color: "#626262",
                 }}
@@ -130,9 +140,15 @@ function Footer() {
                   {idx !== 2 && (
                     <Typography
                       component="span"
-                      sx={infoTextStyle}
+                      sx={{
+                        ...infoTextStyle,
+                        fontFamily: {
+                          xs: "NanumBarunGothic",
+                          sm: "NanumBarunGothic",
+                          md: "NanumSquareNeo-Variable",
+                        },
+                      }}
                       style={{
-                        fontFamily: "NanumSquareNeo-Variable",
                         fontWeight: 700,
                         color: "#626262",
                         textDecoration: "none",
@@ -148,9 +164,13 @@ function Footer() {
                 sx={{
                   ...infoTextStyle,
                   marginTop: { xs: "flex", sm: "flex", md: "20px" },
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
                 }}
                 style={{
-                  fontFamily: "NanumSquareNeo-Variable",
                   fontWeight: 700,
                   color: "#626262",
                   textDecoration: "none",
@@ -171,9 +191,15 @@ function Footer() {
               }}
             >
               <Typography
-                sx={titleTextStyle}
+                sx={{
+                  ...titleTextStyle,
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
+                }}
                 style={{
-                  fontFamily: "NanumSquareNeo-Variable",
                   fontWeight: 700,
                   color: "#626262",
                 }}
@@ -184,10 +210,14 @@ function Footer() {
                 sx={{
                   marginTop: { md: "15px" },
                   fontSize: { md: "24px" },
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
                 }}
                 style={{
                   textAlign: "left",
-                  fontFamily: "NanumSquareNeo-Variable",
                   fontWeight: 700,
                   color: "#626262",
                   textDecoration: "none",
@@ -199,9 +229,13 @@ function Footer() {
                 sx={{
                   ...infoTextStyle,
                   marginTop: { md: "10px" },
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
                 }}
                 style={{
-                  fontFamily: "NanumSquareNeo-Variable",
                   fontWeight: 700,
                   color: "#626262",
                   textDecoration: "none",

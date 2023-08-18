@@ -82,9 +82,13 @@ function ThirdSection() {
                   marginTop: { xs: "60px", sm: "80px", md: "150px" },
                   marginBottom: { xs: "250px", sm: "25px", md: "25px" },
                   textAlign: { xs: "center", sm: "left", md: "left" },
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
                 }}
                 style={{
-                  fontFamily: "NanumSquareNeo-Variable",
                   fontWeight: 900,
                   color: "#8f8f8f",
                 }}
@@ -94,11 +98,15 @@ function ThirdSection() {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", sm: "16px", md: "18px" },
-                  textAlign: { xs: "center", sm: "left", md: "left" },
+                  display: { xs: "none", sm: "flex", md: "flex" },
+                  fontSize: { sm: "16px", md: "18px" },
+                  fontFamily: {
+                    sm: "NanumBarunGothic",
+                    md: "NanumSquareNeo-Variable",
+                  },
                 }}
                 style={{
-                  fontFamily: "NanumSquareNeo-Variable",
+                  textAlign: "left",
                   fontWeight: 700,
                   color: "#626262",
                 }}
@@ -109,6 +117,28 @@ function ThirdSection() {
                 풀티탄 소재의
                 <br /> 폭발적 퍼포먼스 GTD BLACK ICE SERIES로 필드에서 직접
                 경험해보세요.
+              </Typography>
+              <Typography
+                sx={{
+                  display: { xs: "flex", sm: "none", md: "none" },
+                  fontSize: { xs: "16px", sm: "16px", md: "18px" },
+                  fontFamily: {
+                    xs: "NanumBarunGothic",
+                  },
+                }}
+                style={{
+                  textAlign: "center",
+                  fontWeight: 700,
+                  color: "#626262",
+                  justifyContent: "center",
+                }}
+              >
+                BLACK ICE 저변에 깔린 잠재적인 두려움
+                <br /> 두려움을 극복하는 완벽한 샷의 시작
+                <br /> 일본 천재 디자이너가 만들어낸 클럽의 기능을 <br />
+                극대화한 풀티탄 소재의
+                <br /> 폭발적 퍼포먼스 GTD BLACK ICE SERIES로 <br /> 필드에서
+                직접 경험해보세요.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={5}>
