@@ -64,6 +64,7 @@ body {
 }
 #menu-appbar div {
   background-color: transparent !important;
+  box-shadow: none !important;
 }
 
 .header button {
@@ -72,7 +73,7 @@ body {
 }
 
 .header a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #fff;
 }
 

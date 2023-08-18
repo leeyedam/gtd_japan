@@ -16,7 +16,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import { Icon } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const left = [
   { name: "BRAND", link: "/brand" },
@@ -48,6 +48,7 @@ function Header() {
     window.scrollY > 10 ? setNavTypoColor("#000") : setNavTypoColor("#fff");
     window.scrollY > 10 ? setnavSize("4rem") : setnavSize("4rem");
   };
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -63,8 +64,9 @@ function Header() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (link) => {
     setAnchorElNav(null);
+    navigate(link);
   };
 
   const handleCloseUserMenu = () => {
@@ -121,7 +123,10 @@ function Header() {
               }}
             >
               {left.map((page) => (
-                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page.name}
+                  onClick={() => handleCloseNavMenu(page.link)}
+                >
                   <Typography textAlign="center" color="#fff">
                     {page.name}
                   </Typography>
@@ -130,8 +135,7 @@ function Header() {
               {right.map((page) => (
                 <MenuItem
                   key={page.name}
-                  onClick={handleCloseNavMenu}
-                  sx={{ backgroundColor: "transparent" }}
+                  onClick={() => handleCloseNavMenu(page.link)}
                 >
                   <Typography textAlign="center" color="#fff">
                     {page.name}
