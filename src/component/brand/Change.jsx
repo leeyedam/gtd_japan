@@ -72,7 +72,7 @@ function Change() {
             position="absolute"
             zIndex={7}
             sx={{
-              fontSize: { xs: "30px", sm: "34px", md: "82px", lg: "82px" },
+              fontSize: { xs: "28px", sm: "34px", md: "82px", lg: "82px" },
               lineHeight: { xs: "36px", sm: "46px", md: "95px" },
               marginTop: { xs: "60px", sm: "80px", md: "150px" },
               marginBottom: { xs: "250px", sm: "25px", md: "25px" },

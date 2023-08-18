@@ -54,13 +54,13 @@ function BrandHistory() {
             data-aos-delay="200"
             position="absolute"
             sx={{
-              fontSize: { xs: "30px", sm: "34px", md: "82px", lg: "82px" },
+              fontSize: { xs: "28px", sm: "34px", md: "82px", lg: "82px" },
               lineHeight: { xs: "36px", sm: "46px", md: "95px" },
               marginTop: { xs: "60px", sm: "80px", md: "150px" },
               marginBottom: { xs: "250px", sm: "25px", md: "25px" },
               textAlign: { xs: "center", sm: "left", md: "left" },
               top: { xs: "3%", sm: "5%", md: "15%" },
-              left: { xs: "14%", sm: "10%", md: "9%" },
+              left: { xs: "13%", sm: "10%", md: "9%" },
             }}
             style={{
               fontFamily: "NanumSquareNeo-Variable",
