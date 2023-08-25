@@ -6,7 +6,6 @@ function SecondSection() {
   const titleTextStyle = {
     display: { xs: "none", sm: "flex", md: "flex" },
     position: "absolute",
-
     fontSize: { xs: "26px", sm: "38px", md: "76px" },
     lineHeight: { xs: "40px", sm: "55px", md: "95px" },
     marginTop: { xs: "30px" },
@@ -76,7 +75,7 @@ function SecondSection() {
               sx={{
                 ...titleTextStyle,
                 top: { sm: "6%", md: "27%" },
-                left: { sm: "12%", md: "38%" },
+                left: { sm: "12%", md: "39%" },
               }}
               style={{
                 ...titleFontStyle,

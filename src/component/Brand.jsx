@@ -1,5 +1,5 @@
-import { Box, Card, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Box, Card, Grid, Typography } from "@mui/material";
 import BrandHistory from "./brand/BrandHistory";
 import Academy from "./brand/Academy";
 import Change from "./brand/Change";

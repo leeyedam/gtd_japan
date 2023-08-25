@@ -31,7 +31,7 @@ function FourthSection() {
         overflow="hidden"
         sx={{
           maxHeight: { xs: "100%", sm: "100%", md: "100%" },
-          maxWidth: { xs: "100vw", sm: "100vw", md: "1200px" },
+          maxWidth: { xs: "100vw", sm: "100vw", md: "1200px", xl: "1400px" },
           backgroundColor: { xs: "#111" },
         }}
       >
@@ -53,7 +53,7 @@ function FourthSection() {
               sx={{
                 ...titleTextStyle,
                 top: { sm: "2%", md: "15%" },
-                left: { sm: "5%", md: "38%" },
+                left: { sm: "5%", md: "38%", xl: "33%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -68,7 +68,7 @@ function FourthSection() {
               sx={{
                 ...titleTextStyle,
                 top: { sm: "7%", md: "27%" },
-                left: { sm: "5%", md: "38%" },
+                left: { sm: "5%", md: "38%", xl: "33%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -83,7 +83,7 @@ function FourthSection() {
               sx={{
                 ...titleTextStyle,
                 top: { sm: "7%", md: "27%" },
-                left: { sm: "17%", md: "52%" },
+                left: { sm: "17%", md: "45%" },
               }}
               style={{
                 ...titleFontStyle,

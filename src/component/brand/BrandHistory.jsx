@@ -1,11 +1,11 @@
-import { Box, Card, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Box, Card, Grid, Typography } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function BrandHistory() {
   const titleTextStyle = {
     display: { xs: "flex", sm: "flex", md: "flex" },
     position: "absolute",
-
     fontSize: { xs: "26px", sm: "38px", md: "76px" },
     lineHeight: { xs: "40px", sm: "55px", md: "95px" },
     marginTop: { xs: "30px" },
@@ -16,12 +16,30 @@ function BrandHistory() {
     fontWeight: 900,
     textAlign: "left",
   };
+
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 2600,
+      },
+    },
+  });
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Grid item xs={12} sm={12} md={12} position="relative">
         <Card
           sx={{
-            maxWidth: { xs: "320px", sm: "600px", md: "1400px" },
+            maxWidth: {
+              xs: "320px",
+              sm: "600px",
+              md: "1400px",
+              lg: "1400px",
+              xl: "2000px",
+            },
             height: { xs: "450px", sm: "400px", md: "800px" },
             marginTop: { md: "30px" },
           }}
@@ -32,19 +50,20 @@ function BrandHistory() {
         >
           <Box
             position="absolute"
-            backgroundColor="#00000096"
+            backgroundColor="#0000002b"
             borderRadius="20px"
             sx={{
-              width: { xs: "320px", sm: "600px", md: "1400px" },
+              width: { xs: "320px", sm: "600px", md: "1400px", xl: "2000px" },
               height: { xs: "213px", sm: "400px", md: "800px" },
             }}
           />
           <Box
             component="img"
             sx={{
-              width: { xs: "320px", sm: "600px", md: "1400px" },
+              width: { xs: "320px", sm: "600px", md: "1400px", xl: "2000px" },
               height: { xs: "213px", sm: "400px", md: "800px" },
               borderRadius: "20px",
+              objectFit: "cover",
             }}
             src="images/brand/1.Webp"
             alt="gtd"
@@ -60,7 +79,7 @@ function BrandHistory() {
               marginBottom: { xs: "250px", sm: "25px", md: "25px" },
               textAlign: { xs: "center", sm: "left", md: "left" },
               top: { xs: "3%", sm: "5%", md: "15%" },
-              left: { xs: "13%", sm: "10%", md: "9%" },
+              left: { xs: "19%", sm: "20%", md: "9%", lg: "22%", xl: "27%" },
             }}
             style={{
               fontFamily: "NanumSquareNeo-Variable",
@@ -84,7 +103,7 @@ function BrandHistory() {
               marginBottom: { md: "20px" },
               fontWeight: { md: 500 },
               top: { sm: "56%", md: "65%" },
-              left: { sm: "10%", md: "9%" },
+              left: { sm: "20%", md: "9%", lg: "22%", xl: "27%" },
             }}
             style={{
               fontFamily: "NanumSquareNeo-Variable",
@@ -130,7 +149,7 @@ function BrandHistory() {
           </Typography>
         </Card>
       </Grid>
-    </div>
+    </ThemeProvider>
   );
 }
 

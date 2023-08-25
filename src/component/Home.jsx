@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense } from "react";
 import FirstSection from "./FirstSection";
 const SecondSection = lazy(() => import("./SecondSection"));
 const ThirdSection = lazy(() => import("./ThirdSection"));
@@ -6,12 +6,12 @@ const FourthSection = lazy(() => import("./FourthSection"));
 
 function Home() {
   return (
-    <div>
+    <Suspense fallback="..loading">
       <FirstSection />
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-    </div>
+    </Suspense>
   );
 }
 

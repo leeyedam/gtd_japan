@@ -1,5 +1,6 @@
-import { Box, Card, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Box, Card, Grid, Typography } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function Academy() {
   const titleTextStyle = {
@@ -15,13 +16,44 @@ function Academy() {
     fontWeight: 900,
     textAlign: "left",
   };
+
+  const theme = createTheme({
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 2600,
+      },
+    },
+  });
   return (
-    <div>
-      <Grid item xs={12} sm={12} md={12} position="relative">
+    <ThemeProvider theme={theme}>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        position="relative"
+        sx={{
+          maxWidth: {
+            xs: "320px",
+            sm: "600px",
+            md: "1400px",
+            xl: "2000px",
+          },
+        }}
+      >
         <Grid item xs={12} sm={12} md={7}>
           <Card
             sx={{
-              maxWidth: { xs: "320px", sm: "600px", md: "1400px" },
+              maxWidth: {
+                xs: "320px",
+                sm: "600px",
+                // md: "1400px",
+                xl: "2000px",
+              },
               height: { xs: "380px", sm: "400px", md: "800px" },
               marginTop: { sm: "20px", md: "90px" },
             }}
@@ -32,13 +64,13 @@ function Academy() {
           >
             <Box
               sx={{
-                width: { xs: "320px", sm: "600px", md: "1400px" },
+                width: { xs: "320px", sm: "600px", md: "1400px", xl: "2000px" },
                 height: { xs: "400px", sm: "400px", md: "800px" },
               }}
             />
             <Box
               position="absolute"
-              backgroundColor="#00000052"
+              backgroundColor="#0000002b"
               zIndex={5}
               borderRadius="20px"
               sx={{
@@ -53,7 +85,7 @@ function Academy() {
               position="absolute"
               component="img"
               sx={{
-                width: { xs: "320px", sm: "600px", md: "680px" },
+                width: { xs: "320px", sm: "600px", md: "680px", xl: "920px" },
                 height: { xs: "213px", sm: "400px", md: "800px" },
                 top: { xs: "2%", sm: "5%", md: "15%" },
                 left: { xs: "0%", sm: "0%", md: "0%" },
@@ -99,7 +131,7 @@ function Academy() {
             zIndex={7}
             sx={{
               display: { xs: "none", sm: "flex", md: "flex" },
-              maxWidth: { xs: "320px", sm: "500px", md: "710px" },
+              maxWidth: { xs: "320px", sm: "470px", md: "650px", xl: "750px" },
               fontSize: { xs: "14px", md: "18px" },
               lineHeight: { md: "35px" },
               marginBottom: { md: "20px" },
@@ -113,10 +145,10 @@ function Academy() {
               textAlign: "right",
             }}
           >
-            이후 2012년에 GTD(George Takei Design)브랜드를 탄생시키면서
-            <br /> 클럽 제작과 아마추어 및 주니어들을 육성하는 GTD Academy를
-            함께 설립하였으며,
-            <br /> JPGA와 JLPGA 프로들을 코치하며, 'Team George'를 만들었다.
+            이후 2012년에 GTD(George Takei Design)브랜드를 탄생시키면서 클럽
+            제작과 아마추어 및 주니어들을 육성하는 GTD Academy를 함께
+            설립하였으며, JPGA와 JLPGA 프로들을 코치하며, 'Team George'를
+            만들었다.
           </Typography>
           <Typography
             position="absolute"
@@ -143,7 +175,7 @@ function Academy() {
           </Typography>
         </Grid>
       </Grid>
-    </div>
+    </ThemeProvider>
   );
 }
 

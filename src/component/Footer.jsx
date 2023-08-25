@@ -41,7 +41,7 @@ function Footer() {
         sm: 600,
         md: 900,
         lg: 1200,
-        xl: 1800,
+        xl: 2600,
       },
     },
   });
@@ -67,7 +67,7 @@ function Footer() {
             <Divider
               sx={{
                 display: { xs: "flex", sm: "flex", md: "flex" },
-                width: { xs: "100vw", sm: "100vw", md: "1800px" },
+                width: { xs: "100vw", sm: "100vw", md: "1800px", xl: "2400px" },
                 marginBottom: { xs: "40px", sm: "60px", md: "60px" },
                 border: ".2px solid #2e2e2e",
               }}
@@ -81,8 +81,8 @@ function Footer() {
                 paddingLeft: {
                   sm: "40px",
                   md: "350px",
-                  lg: "400px",
-                  xl: "450px",
+                  lg: "440px",
+                  xl: "1000px",
                 },
                 textAlign: "left",
               }}

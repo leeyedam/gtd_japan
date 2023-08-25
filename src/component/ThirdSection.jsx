@@ -19,7 +19,7 @@ function ThirdSection() {
         sm: 600,
         md: 900,
         lg: 1200,
-        xl: 1800,
+        xl: 2600,
       },
     },
   });
@@ -45,6 +45,7 @@ function ThirdSection() {
                 xs: "center",
                 sm: "center",
                 md: "space-between",
+                xl: "center",
               },
               alignItems: "center",
               marginTop: { xs: "30px", sm: "30px", md: "130px" },
@@ -63,7 +64,7 @@ function ThirdSection() {
                   sm: "60px",
                   md: "360px",
                   lg: "400px",
-                  xl: "480px",
+                  xl: "580px",
                 },
                 textAlign: "left",
               }}
@@ -146,7 +147,7 @@ function ThirdSection() {
                 sx={{
                   position: "absolute",
                   top: { xs: "37%", sm: "5%", md: "-20%" },
-                  right: { xs: "20%", sm: "-10%", md: "8%" },
+                  right: { xs: "20%", sm: "-10%", md: "8%", xl: "25%" },
                   maxHeight: { xs: "220px", sm: "480px", md: "1000px" },
                   maxWidth: { xs: "220px", sm: "480px", md: "100%" },
                   marginTop: { md: "30px" },

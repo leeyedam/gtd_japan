@@ -136,3 +136,19 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.fitting button {
+  color: #c7c7c7;
+}
+
+.fitting button:first-child {
+  margin-top: 32px;
+}
+
+.fitting .Mui-selected {
+  color: #fff !important;
+}
+
+.fitting .MuiTabs-indicator {
+  background-color: #aa2727 !important;
+}

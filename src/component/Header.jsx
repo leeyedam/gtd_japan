@@ -13,22 +13,21 @@ import MenuItem from "@mui/material/MenuItem";
 import { makeStyles } from "@mui/styles";
 import { Link, useNavigate } from "react-router-dom";
 
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: "#000",
-  },
-});
-
 function Header() {
   const left = [
     { name: "BRAND", link: "/brand" },
-    { name: "FITTING", link: "/" },
+    { name: "FITTING", link: "/fitting" },
     { name: "ACCESSORIES", link: "/" },
   ];
-  const right = [
+  const rightLogOff = [
+    { name: "GUARANTEE", link: "/guarantee" },
+    { name: "LOGIN", link: "/login" },
+    { name: "SIGNUP", link: "/signup" },
+  ];
+  const rightLogOn = [
     { name: "GUARANTEE", link: "/" },
-    { name: "LOGIN", link: "/" },
-    { name: "SIGNUP", link: "/" },
+    { name: "LOGOUT", link: "/" },
+    { name: "BOOKMARK", link: "/" },
   ];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
@@ -73,6 +72,12 @@ function Header() {
     setAnchorElUser(null);
   };
 
+  const useStyles = makeStyles({
+    root: {
+      backgroundColor: "#000",
+    },
+  });
+
   return (
     <AppBar
       className="header"
@@ -116,32 +121,37 @@ function Header() {
                 horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClose={() => setAnchorElNav(null)}
               sx={{
                 display: { xs: "block", md: "none" },
                 backgroundColor: "#060606b0",
               }}
             >
-              {left.map((page) => (
-                <MenuItem
-                  key={page.name}
-                  onClick={() => handleCloseNavMenu(page.link)}
-                >
-                  <Typography textAlign="center" color="#fff">
-                    {page.name}
-                  </Typography>
-                </MenuItem>
-              ))}
-              {right.map((page) => (
-                <MenuItem
-                  key={page.name}
-                  onClick={() => handleCloseNavMenu(page.link)}
-                >
-                  <Typography textAlign="center" color="#fff">
-                    {page.name}
-                  </Typography>
-                </MenuItem>
-              ))}
+              {left.map((page) => {
+                return (
+                  <MenuItem
+                    key={page.name}
+                    onClick={() => handleCloseNavMenu(page.link)}
+                  >
+                    <Typography textAlign="center" color="#fff">
+                      {page.name}
+                    </Typography>
+                  </MenuItem>
+                );
+              })}
+              {rightLogOff.map((page) => {
+                return (
+                  <MenuItem
+                    key={page.name}
+                    module="Layout_statelogoff"
+                    onClick={() => handleCloseNavMenu(page.link)}
+                  >
+                    <Typography textAlign="center" color="#fff">
+                      {page.name}
+                    </Typography>
+                  </MenuItem>
+                );
+              })}
             </Menu>
             <Typography
               variant="h1"
@@ -162,11 +172,13 @@ function Header() {
               justifyContent: "space-around",
             }}
           >
-            {left.map((page) => (
-              <Button key={page.name} sx={buttonStyle}>
-                <Link to={page.link}>{page.name}</Link>
-              </Button>
-            ))}
+            {left.map((page) => {
+              return (
+                <Button key={page.name} sx={buttonStyle}>
+                  <Link to={page.link}>{page.name}</Link>
+                </Button>
+              );
+            })}
             <Typography
               variant="h1"
               component="a"
@@ -178,11 +190,17 @@ function Header() {
             >
               <img src="images/logo.png" alt="logo" />
             </Typography>
-            {right.map((page) => (
-              <Button key={page.name} sx={buttonStyle}>
-                <Link to={page.link}>{page.name}</Link>
-              </Button>
-            ))}
+            {rightLogOff.map((page) => {
+              return (
+                <Button
+                  key={page.name}
+                  sx={buttonStyle}
+                  module="Layout_statelogoff"
+                >
+                  <Link to={page.link}>{page.name}</Link>
+                </Button>
+              );
+            })}
           </Box>
         </Toolbar>
       </Container>

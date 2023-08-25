@@ -1,5 +1,5 @@
-import Slider from "react-slick";
 import React from "react";
+import Slider from "react-slick";
 import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import FirstSectionText from "./FirstSectionText";
