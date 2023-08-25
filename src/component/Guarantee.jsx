@@ -18,9 +18,9 @@ function Guarantee() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className="first-section">Guarantee</div>
-    </ThemeProvider>
+    <div className="first-section">
+      <ThemeProvider theme={theme}>Guarantee</ThemeProvider>
+    </div>
   );
 }
 

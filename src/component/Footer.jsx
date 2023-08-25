@@ -46,8 +46,8 @@ function Footer() {
     },
   });
   return (
-    <ThemeProvider theme={theme}>
-      <div className="footer">
+    <div className="footer">
+      <ThemeProvider theme={theme}>
         <Box
           width="100vw"
           sx={{
@@ -201,8 +201,8 @@ function Footer() {
             </Grid>
           </Grid>
         </Box>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

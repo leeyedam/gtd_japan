@@ -1,6 +1,6 @@
 import React from "react";
 import { experimentalStyled as styled } from "@mui/material/styles";
-import { Paper, Grid, Box } from "@mui/material";
+import { Paper, Grid, Box, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { driverData } from "./driver";
 
@@ -25,15 +25,15 @@ function FittingLayout() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className="fitting">
+    <div className="fitting">
+      <ThemeProvider theme={theme}>
         <Grid
           container
           spacing={{ xs: 2, sm: 4, md: 4, xl: 8 }}
           columns={{ xs: 4, sm: 12, md: 12 }}
           sx={{
             width: {
-              xs: "190px",
+              xs: "236px",
               sm: "600px",
               md: "1400px",
               xl: "2000px",
@@ -63,11 +63,13 @@ function FittingLayout() {
                 src={data.img}
                 alt="gtd"
               />
+              <Typography>{data.title}</Typography>
+              <Typography>{data.price}</Typography>
             </Grid>
           ))}
         </Grid>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

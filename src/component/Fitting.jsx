@@ -67,7 +67,7 @@ function Fitting() {
             marginTop: {
               xs: "40px",
               sm: "100px",
-              md: "180px",
+              md: "150px",
               xl: "200px",
             },
             marginLeft: {
@@ -78,7 +78,7 @@ function Fitting() {
             },
             color: "#fff",
             maxWidth: {
-              xs: "320px",
+              xs: "356px",
               sm: "800px",
               md: "1800px",
               xl: "2400px",
@@ -92,7 +92,6 @@ function Fitting() {
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs example"
-            // indicatorColor="secondary"
             sx={{ borderRight: 1, borderColor: "transparent" }}
           >
             <Tab label="DRIVER" {...a11yProps(0)} />

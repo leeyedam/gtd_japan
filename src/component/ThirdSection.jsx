@@ -24,8 +24,8 @@ function ThirdSection() {
     },
   });
   return (
-    <ThemeProvider theme={theme}>
-      <div className="third-section">
+    <div className="third-section">
+      <ThemeProvider theme={theme}>
         <Box
           align="center"
           width="100vw"
@@ -178,8 +178,8 @@ function ThirdSection() {
             </Grid>
           </Grid>
         </Box>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

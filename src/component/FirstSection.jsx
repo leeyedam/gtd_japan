@@ -36,8 +36,8 @@ function FirstSection() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className="first-section">
+    <div className="first-section">
+      <ThemeProvider theme={theme}>
         <Slider {...settings}>
           <Box position="relative" align="center" width="100vw" height="100vh">
             <FirstSectionText
@@ -113,8 +113,8 @@ function FirstSection() {
             />
           </Box>
         </Slider>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

@@ -18,9 +18,9 @@ function Signup() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className="first-section">Signup</div>
-    </ThemeProvider>
+    <div className="first-section">
+      <ThemeProvider theme={theme}>Signup</ThemeProvider>
+    </div>
   );
 }
 

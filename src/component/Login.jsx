@@ -18,9 +18,9 @@ function Login() {
   });
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className="first-section">login</div>
-    </ThemeProvider>
+    <div className="first-section">
+      <ThemeProvider theme={theme}>login</ThemeProvider>
+    </div>
   );
 }
 
