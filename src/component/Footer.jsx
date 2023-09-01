@@ -1,12 +1,13 @@
 import React from "react";
 import { Box, Divider, Grid, Typography, createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const linkArray = [
-    { text: "개인정보처리방침", link: "#" },
-    { text: "이용약관", link: "#" },
-    { text: "회사소개", link: "#" },
+    { text: "개인정보처리방침", link: "/policy" },
+    { text: "이용약관", link: "/terms" },
+    { text: "회사소개", link: "/brand" },
   ];
   const infoTextStyle = {
     fontSize: { xs: "12px", sm: "16px", md: "14px" },
@@ -116,19 +117,16 @@ function Footer() {
               {linkArray.map((arr, idx) => (
                 <Typography
                   key={idx}
-                  component="a"
-                  href={arr.link}
                   sx={{
                     ...infoTextStyle,
                     marginRight: "20px",
                   }}
                   style={{
                     fontWeight: 700,
-                    color: "#626262",
-                    textDecoration: "none",
+                    display: "inline-block",
                   }}
                 >
-                  {arr.text}
+                  <Link to={arr.link}> {arr.text}</Link>
                   {idx !== 2 && (
                     <Typography
                       component="span"

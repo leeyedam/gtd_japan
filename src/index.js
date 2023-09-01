@@ -6,14 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 import "./assets/fonts/Font.css";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
+import { HelmetProvider } from "react-helmet-async";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>
 );
 

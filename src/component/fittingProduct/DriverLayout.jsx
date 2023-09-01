@@ -4,7 +4,7 @@ import { Paper, Grid, Box, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { driverData } from "./driver";
 
-function FittingLayout() {
+function DriverLayout() {
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
     ...theme.typography.body2,
@@ -47,24 +47,24 @@ function FittingLayout() {
           }}
         >
           {driverData.map((data) => (
-            <Grid item xs={4} sm={6} md={4} key={data.title}>
+            <Grid item xs={4} sm={12} md={4} key={data.title}>
               <Box
                 component="img"
                 sx={{
                   height: {
                     xs: "220px",
-                    sm: "250px",
+                    sm: "480px",
                     md: "422px",
                     xl: "600px",
                   },
-                  width: { xs: "220px", sm: "250px", md: "422px", xl: "600px" },
+                  width: { xs: "220px", sm: "480px", md: "422px", xl: "600px" },
                   objectFit: "cover",
                 }}
                 src={data.img}
                 alt="gtd"
               />
-              <Typography>{data.title}</Typography>
-              <Typography>{data.price}</Typography>
+              <Typography component={"div"}>{data.title}</Typography>
+              <Typography component={"div"}>{data.price}</Typography>
             </Grid>
           ))}
         </Grid>
@@ -73,4 +73,4 @@ function FittingLayout() {
   );
 }
 
-export default React.memo(FittingLayout);
+export default React.memo(DriverLayout);

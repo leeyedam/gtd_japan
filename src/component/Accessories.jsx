@@ -2,10 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import DriverLayout from "./fittingProduct/DriverLayout";
-import WoodLayout from "./fittingProduct/WoodLayout";
-import IronLayout from "./fittingProduct/IronLayout";
-import WedgeLayout from "./fittingProduct/WedgeLayout";
+import BagLayout from "./accessoriesProduct/BagLayout";
 import SEOMetaTag from "../SEOMetaTag";
 
 function TabPanel(props) {
@@ -37,7 +34,7 @@ function a11yProps(index) {
   };
 }
 
-function Fitting() {
+function Accessories() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -58,7 +55,7 @@ function Fitting() {
   return (
     <div className="fitting">
       <SEOMetaTag
-        title="FITTING | GTD golf"
+        title="ACCESSORIES | GTD golf"
         description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
       />
       <ThemeProvider theme={theme}>
@@ -98,22 +95,10 @@ function Fitting() {
             aria-label="Vertical tabs example"
             sx={{ borderRight: 1, borderColor: "transparent" }}
           >
-            <Tab label="DRIVER" {...a11yProps(0)} />
-            <Tab label="WOOD" {...a11yProps(1)} />
-            <Tab label="IRON" {...a11yProps(2)} />
-            <Tab label="WEDGE" {...a11yProps(3)} />
+            <Tab label="BAG" {...a11yProps(0)} />
           </Tabs>
           <TabPanel value={value} index={0}>
-            <DriverLayout />
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <WoodLayout />
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            <IronLayout />
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            <WedgeLayout />
+            <BagLayout />
           </TabPanel>
         </Box>
       </ThemeProvider>
@@ -121,4 +106,4 @@ function Fitting() {
   );
 }
 
-export default React.memo(Fitting);
+export default React.memo(Accessories);

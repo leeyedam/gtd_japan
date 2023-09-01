@@ -3,6 +3,7 @@ import { Box, Card, Grid, Typography } from "@mui/material";
 import BrandHistory from "./brand/BrandHistory";
 import Academy from "./brand/Academy";
 import Change from "./brand/Change";
+import SEOMetaTag from "../SEOMetaTag";
 
 function Brand() {
   const titleTextStyle = {
@@ -20,6 +21,7 @@ function Brand() {
   };
   return (
     <div>
+      <SEOMetaTag title="GTD golf" description="지티디" />
       <Box
         align="center"
         width="100vw"

@@ -17,7 +17,7 @@ function Header() {
   const left = [
     { name: "BRAND", link: "/brand" },
     { name: "FITTING", link: "/fitting" },
-    { name: "ACCESSORIES", link: "/" },
+    { name: "ACCESSORIES", link: "/accessories" },
   ];
   const rightLogOff = [
     { name: "GUARANTEE", link: "/guarantee" },
