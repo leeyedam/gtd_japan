@@ -3,6 +3,7 @@ import { experimentalStyled as styled } from "@mui/material/styles";
 import { Paper, Grid, Box, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { woodData } from "./wood";
+import { Link } from "react-router-dom";
 
 function WoodLayout() {
   const Item = styled(Paper)(({ theme }) => ({
@@ -48,21 +49,28 @@ function WoodLayout() {
         >
           {woodData.map((data) => (
             <Grid item xs={4} sm={12} md={4} key={data.title}>
-              <Box
-                component="img"
-                sx={{
-                  height: {
-                    xs: "220px",
-                    sm: "480px",
-                    md: "422px",
-                    xl: "600px",
-                  },
-                  width: { xs: "220px", sm: "480px", md: "422px", xl: "600px" },
-                  objectFit: "cover",
-                }}
-                src={data.img}
-                alt="gtd"
-              />
+              <Link to={`/product/${data.link}`}>
+                <Box
+                  component="img"
+                  sx={{
+                    height: {
+                      xs: "220px",
+                      sm: "480px",
+                      md: "422px",
+                      xl: "600px",
+                    },
+                    width: {
+                      xs: "220px",
+                      sm: "480px",
+                      md: "422px",
+                      xl: "600px",
+                    },
+                    objectFit: "cover",
+                  }}
+                  src={data.img}
+                  alt="gtd"
+                />
+              </Link>
               <Typography component={"div"}>{data.title}</Typography>
               <Typography component={"div"}>{data.price}</Typography>
             </Grid>

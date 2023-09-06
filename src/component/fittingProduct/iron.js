@@ -1,8 +1,10 @@
 export const ironData = [
   {
+    id: "GT01",
     img: "images/fitting/GT-01.Webp",
     title: "GT - 01",
-    link: "/",
+    link: "GT01",
     price: "2,660,000",
+    src: "images/gtdProduct/GT01",
   },
 ];

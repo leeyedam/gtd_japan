@@ -27,7 +27,7 @@ function Header() {
   const rightLogOn = [
     { name: "GUARANTEE", link: "/" },
     { name: "LOGOUT", link: "/" },
-    { name: "BOOKMARK", link: "/" },
+    { name: "SNS", link: "/" },
   ];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
@@ -143,7 +143,6 @@ function Header() {
                 return (
                   <MenuItem
                     key={page.name}
-                    module="Layout_statelogoff"
                     onClick={() => handleCloseNavMenu(page.link)}
                   >
                     <Typography textAlign="center" color="#fff">
@@ -161,7 +160,7 @@ function Header() {
               href="/"
               sx={logoTextStyle}
             >
-              <img src="images/logo.png" alt="logo" />
+              <img src={require("../assets/images/logo.png")} alt="logo" />
             </Typography>
           </Box>
 
@@ -188,15 +187,11 @@ function Header() {
                 marginTop: "14px",
               }}
             >
-              <img src="images/logo.png" alt="logo" />
+              <img src={require("../assets/images/logo.png")} alt="logo" />
             </Typography>
             {rightLogOff.map((page) => {
               return (
-                <Button
-                  key={page.name}
-                  sx={buttonStyle}
-                  module="Layout_statelogoff"
-                >
+                <Button key={page.name} sx={buttonStyle}>
                   <Link to={page.link}>{page.name}</Link>
                 </Button>
               );

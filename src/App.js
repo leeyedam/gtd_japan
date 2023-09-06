@@ -1,4 +1,4 @@
-import { useEffect, lazy } from "react";
+import { useEffect, lazy, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,6 +17,8 @@ import Accessories from "./component/Accessories";
 import SEOMetaTag from "./SEOMetaTag";
 import TermsOfUse from "./TermsOfUse";
 import PrivacyPolicy from "./PrivacyPolicy";
+import FittingProductPageLayout from "./component/FittingProductPageLayout";
+import AccessoriesProductPageLayout from "./component/AccessoriesProductPageLayout";
 
 function App() {
   useEffect(() => {
@@ -42,6 +44,11 @@ function App() {
           <Route path="/accessories" element={<Accessories />} />
           <Route path="/terms" element={<TermsOfUse />} />
           <Route path="/policy" element={<PrivacyPolicy />} />
+          <Route path="/product/:id" element={<FittingProductPageLayout />} />
+          <Route
+            path="/accessories/:id"
+            element={<AccessoriesProductPageLayout />}
+          />
         </Routes>
       </div>
       <Footer />

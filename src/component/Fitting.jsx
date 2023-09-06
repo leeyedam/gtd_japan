@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import DriverLayout from "./fittingProduct/DriverLayout";
@@ -38,10 +39,17 @@ function a11yProps(index) {
 }
 
 function Fitting() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    navigate("/fitting", {
+      state: {
+        idx: newValue,
+      },
+    });
   };
   const theme = createTheme({
     breakpoints: {
@@ -54,6 +62,12 @@ function Fitting() {
       },
     },
   });
+
+  useEffect(() => {
+    if (location.state !== null && location.state.idx !== value) {
+      setValue(location.state.idx);
+    }
+  }, []);
 
   return (
     <div className="fitting">

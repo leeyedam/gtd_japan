@@ -42,6 +42,7 @@ function FirstSection() {
           <Box position="relative" align="center" width="100vw" height="100vh">
             <FirstSectionText
               title="FITTING"
+              link="/fitting"
               top={{ xs: "65%", sm: "62%", md: "33%" }}
               left={{ xs: "55%", sm: "56%", md: "76%", lg: "77%", xl: "80%" }}
               width={{ md: "none" }}
@@ -79,6 +80,7 @@ function FirstSection() {
           >
             <FirstSectionText
               title="ACCESSORIES"
+              link="/accessories"
               top={{ xs: "65%", sm: "62%", md: "33%" }}
               left={{ xs: "25%", sm: "28%", md: "56%", lg: "56.5%" }}
               width={{ md: "40%" }}
@@ -100,6 +102,7 @@ function FirstSection() {
           >
             <FirstSectionText
               title="GUARANTEE"
+              link="guarantee"
               top={{ xs: "66%", sm: "62%", md: "33%" }}
               left={{ xs: "33%", sm: "35%", md: "56%" }}
               width={{ md: "40%" }}

@@ -77,9 +77,19 @@ body {
   color: #fff;
 }
 
+.footer a {
+  text-decoration: none !important;
+  color: #626262;
+}
+
 .first-section {
   height: 100vh;
   overflow: hidden;
+}
+
+.first-section a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .first-section h1 {
@@ -105,7 +115,11 @@ body {
   bottom: 25px !important;
 }
 
-.slick-dots li.slick-active button:before {
+.first-section .slick-dots li button:before {
+  color: #b0b0b0 !important;
+}
+
+.first-section .slick-dots li.slick-active button:before {
   color: #fff !important;
 }
 
@@ -174,4 +188,87 @@ body {
 .terms strong {
   display: block;
   padding-bottom: 12px;
+}
+
+.product-page .slick-dots li.slick-active button:before {
+  color: #060606 !important;
+}
+
+.form h1 {
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  letter-spacing: 8px;
+  margin-bottom: 50px;
+}
+
+.form div {
+  text-align: left;
+}
+
+.form {
+  /* background: #0e101c; */
+  /* max-width: 400px; */
+  /* margin: 0 auto; */
+}
+
+.form h5 {
+  text-align: left;
+  color: #bf1650;
+}
+
+.form a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.form h5::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+.form h2 {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.form h2 a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.form .white {
+  padding: 0 15px;
+  color: #fff;
+}
+
+.form .red {
+  padding: 0 16px;
+  color: #bf1650;
+}
+
+.form input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.form button {
+  cursor: pointer;
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #aa2727;
+  background-color: #aa2727;
+  padding: 15px;
+  margin-bottom: 55px;
+  font-size: 14px;
 }

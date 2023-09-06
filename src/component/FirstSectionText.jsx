@@ -1,7 +1,8 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
-function FirstSectionText({ title, top, left, width }) {
+function FirstSectionText({ title, top, left, width, link }) {
   const titleTextStyle = {
     fontSize: { xs: "40px", sm: "76px", md: "96px" },
     textAlign: { xs: "right", sm: "right" },
@@ -24,7 +25,7 @@ function FirstSectionText({ title, top, left, width }) {
         {title}
       </Typography>
       <Typography className="detail" variant="h3" sx={subTitleTextStyle}>
-        Detail View
+        <Link to={link}>Detail View</Link>
       </Typography>
     </Box>
   );

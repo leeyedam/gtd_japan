@@ -77,12 +77,13 @@ function Footer() {
               item
               xs={10}
               sm={12}
-              md={7}
+              md={6}
+              lg={7}
               sx={{
                 paddingLeft: {
                   sm: "40px",
-                  md: "350px",
-                  lg: "440px",
+                  md: "50px",
+                  lg: "460px",
                   xl: "1000px",
                 },
                 textAlign: "left",
@@ -162,7 +163,7 @@ function Footer() {
               md={5}
               sx={{
                 display: { xs: "none", md: "flex" },
-                paddingLeft: { md: "30px", lg: "0px" },
+                paddingLeft: { md: "80px", lg: "0px" },
                 flexDirection: { md: "column" },
               }}
             >
