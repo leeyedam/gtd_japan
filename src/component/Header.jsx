@@ -12,28 +12,16 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { makeStyles } from "@mui/styles";
 import { Link, useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { firebaseAuth } from "../firebase";
 
 function Header() {
-  const left = [
-    { name: "BRAND", link: "/brand" },
-    { name: "FITTING", link: "/fitting" },
-    { name: "ACCESSORIES", link: "/accessories" },
-  ];
-  const rightLogOff = [
-    { name: "GUARANTEE", link: "/guarantee" },
-    { name: "LOGIN", link: "/login" },
-    { name: "SIGNUP", link: "/signup" },
-  ];
-  const rightLogOn = [
-    { name: "GUARANTEE", link: "/" },
-    { name: "LOGOUT", link: "/" },
-    { name: "SNS", link: "/" },
-  ];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [navSize, setnavSize] = useState("4rem");
   const [navColor, setnavColor] = useState("transparent");
   const [navTypoColor, setNavTypoColor] = useState("#fff");
+  const [login, setLogin] = useState(false);
   const buttonStyle = { my: 2, color: "white", display: "block" };
   const logoTextStyle = {
     mr: 2,
@@ -41,6 +29,16 @@ function Header() {
     height: "40px",
     textDecoration: "none",
   };
+  const left = [
+    { name: "BRAND", link: "/brand" },
+    { name: "FITTING", link: "/fitting" },
+    { name: "ACCESSORIES", link: "/accessories" },
+  ];
+  const right = [
+    { name: "GUARANTEE", link: "/guarantee" },
+    { name: login ? "LOGOUT" : "LOGIN", link: "/login" },
+    { name: "SIGNUP", link: "/signup" },
+  ];
 
   const listenScrollEvent = () => {
     window.scrollY > 10 ? setnavColor("#292929") : setnavColor("transparent");
@@ -48,6 +46,10 @@ function Header() {
     window.scrollY > 10 ? setnavSize("4rem") : setnavSize("4rem");
   };
   const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.getItem("token") && setLogin(true);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
@@ -77,6 +79,16 @@ function Header() {
       backgroundColor: "#000",
     },
   });
+
+  const handleLogout = async () => {
+    try {
+      await signOut(firebaseAuth);
+      localStorage.clear();
+      window.location.reload();
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   return (
     <AppBar
@@ -139,7 +151,7 @@ function Header() {
                   </MenuItem>
                 );
               })}
-              {rightLogOff.map((page) => {
+              {right.map((page) => {
                 return (
                   <MenuItem
                     key={page.name}
@@ -189,8 +201,16 @@ function Header() {
             >
               <img src={require("../assets/images/logo.png")} alt="logo" />
             </Typography>
-            {rightLogOff.map((page) => {
-              return (
+            {right.map((page) => {
+              return login && page.name === "LOGOUT" ? (
+                <Button
+                  key={page.name}
+                  sx={buttonStyle}
+                  onClick={() => handleLogout()}
+                >
+                  <Link to={"/"}>{page.name}</Link>
+                </Button>
+              ) : (
                 <Button key={page.name} sx={buttonStyle}>
                   <Link to={page.link}>{page.name}</Link>
                 </Button>

@@ -1,11 +1,22 @@
-import React from "react";
-import { Box, Checkbox, Divider, Grid, Typography } from "@mui/material";
+import React, { useCallback, useState } from "react";
+import {
+  Box,
+  Checkbox,
+  Grid,
+  Typography,
+  CircularProgress,
+  Stack,
+} from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Controller, useForm } from "react-hook-form";
+import "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import TermsOfUse from "../TermsOfUse";
+import { firebaseAuth } from "../firebase";
 
 function Signup() {
+  const [loading, setLoading] = useState(false);
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -24,8 +35,48 @@ function Signup() {
     control,
     formState: { errors, isSubmitting },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+
+  const postUserData = useCallback(async (email, password, phone, username) => {
+    setLoading(true);
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        firebaseAuth,
+        email,
+        password
+      );
+      const uid = userCredential?.user.uid;
+      const userRef = doc(getFirestore(), "users", uid);
+      await setDoc(userRef, {
+        uid: uid,
+        email: email,
+        name: username,
+        phone: phone,
+      });
+      window.location.replace("/");
+    } catch (e) {
+      console.error(e);
+      console.log(e.message);
+      e.message === "Firebase: Error (auth/email-already-in-use)." &&
+        alert("이미 가입된 사용자입니다.");
+      setLoading(false);
+    }
+  }, []);
+
+  const onSubmit = (data) => {
+    postUserData(data.email, data.password, data.phone, data.username);
+  };
+  if (loading) {
+    return (
+      <Stack alignItems="center" justifyContent="center" height="100vh">
+        <CircularProgress
+          size={150}
+          style={{
+            color: "#aa2727",
+          }}
+        />
+      </Stack>
+    );
+  }
 
   return (
     <div className="form">
@@ -51,7 +102,7 @@ function Signup() {
           justifyContent={"center"}
           alignContent={"center"}
         >
-          <Grid item xs={4.5} sm={10} md={8} lg={5} xl={4}>
+          <Grid item xs={4.5} sm={8} md={6} lg={5} xl={4}>
             <Box
               sx={{
                 padding: {
@@ -91,29 +142,32 @@ function Signup() {
                     },
                   }}
                 >
-                  <Grid item xs={6} sm={5} md={4.5} lg={4.5} xl={4}>
-                    <Typography component={"h2"}>아이디</Typography>
+                  <Grid
+                    item
+                    xs={6}
+                    sm={8}
+                    md={6}
+                    lg={5}
+                    xl={4}
+                    justifyContent={"center"}
+                  >
+                    <Typography component={"h2"}>이메일</Typography>
                     <input
-                      name="id"
+                      name="email"
                       type="text"
-                      placeholder="id"
-                      {...register("id", {
+                      placeholder="email"
+                      {...register("email", {
                         required: true,
-                        minLength: 4,
-                        maxLength: 12,
+                        pattern:
+                          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                       })}
                     />
-                    {errors.id?.type === "required" && (
+                    {errors.email?.type === "required" && (
                       <h5 style={{ fontSize: "14px" }}>필수 항목입니다.</h5>
                     )}
-                    {errors.id?.type === "minLength" && (
+                    {errors.email?.type === "pattern" && (
                       <h5 style={{ fontSize: "14px" }}>
-                        4글자 이상 입력해 주세요.
-                      </h5>
-                    )}
-                    {errors.id?.type === "maxLength" && (
-                      <h5 style={{ fontSize: "14px" }}>
-                        12글자 이하 입력해 주세요.
+                        유효한 이메일을 입력해 주세요.
                       </h5>
                     )}
                     <Typography component={"h2"}>비밀번호</Typography>
@@ -177,13 +231,11 @@ function Signup() {
                         5글자 이하 입력해 주세요.
                       </h5>
                     )}
-                  </Grid>
-                  <Grid item xs={6} sm={5} md={4.5} lg={4.5} xl={4}>
                     <Typography component={"h2"}>휴대전화</Typography>
                     <input
                       name="phone"
                       type="text"
-                      placeholder="phone"
+                      placeholder="숫자만 입력해 주세요."
                       {...register("phone", {
                         required: true,
                         pattern:
@@ -196,25 +248,6 @@ function Signup() {
                     {errors.phone?.type === "pattern" && (
                       <h5 style={{ fontSize: "14px" }}>
                         휴대전화 번호가 정확한지 확인해 주세요.
-                      </h5>
-                    )}
-                    <Typography component={"h2"}>이메일</Typography>
-                    <input
-                      name="email"
-                      type="text"
-                      placeholder="email"
-                      {...register("email", {
-                        required: true,
-                        pattern:
-                          /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                      })}
-                    />
-                    {errors.email?.type === "required" && (
-                      <h5 style={{ fontSize: "14px" }}>필수 항목입니다.</h5>
-                    )}
-                    {errors.email?.type === "pattern" && (
-                      <h5 style={{ fontSize: "14px" }}>
-                        유효한 이메일을 입력해 주세요.
                       </h5>
                     )}
                     <Box

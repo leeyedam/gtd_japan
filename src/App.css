@@ -104,6 +104,11 @@ body {
   color: #fff;
 }
 
+.slick-slide:focus,
+.slick-slide div {
+  outline: none;
+}
+
 .slick-active .title,
 .slick-active .detail {
   animation: fadein 3s;

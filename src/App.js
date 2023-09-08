@@ -19,13 +19,26 @@ import TermsOfUse from "./TermsOfUse";
 import PrivacyPolicy from "./PrivacyPolicy";
 import FittingProductPageLayout from "./component/FittingProductPageLayout";
 import AccessoriesProductPageLayout from "./component/AccessoriesProductPageLayout";
+import { useDispatch, useSelector } from "react-redux";
+import { firebaseAuth } from "./firebase";
+import { onAuthStateChanged } from "firebase/auth";
+import { clearUser, setUser } from "./store/userReducer";
 
 function App() {
+  const dispatch = useDispatch();
+  const { isLoading, currentUser } = useSelector((state) => state.user);
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   });
+  useEffect(() => {
+    if (Date.now() > currentUser?.stsTokenManager.expirationTime) {
+      localStorage.clear();
+      window.location.reload();
+    }
+  }, []);
+
   return (
     <div className="App">
       <div className="App">

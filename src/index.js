@@ -7,16 +7,21 @@ import "./assets/fonts/Font.css";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import { HelmetProvider } from "react-helmet-async";
+import { Provider } from "react-redux";
+import { legacy_createStore } from "redux";
+import rootReducer from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
+    <Provider store={legacy_createStore(rootReducer)}>
+      <HelmetProvider>
+        <BrowserRouter>
+          <ScrollToTop />
+          <App />
+        </BrowserRouter>
+      </HelmetProvider>
+    </Provider>
   </React.StrictMode>
 );
 

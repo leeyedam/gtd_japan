@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "gtdtest-2",
+    "test": "gtdtest-2"
+  },
+  "targets": {},
+  "etags": {}
+}

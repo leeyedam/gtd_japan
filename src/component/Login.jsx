@@ -1,10 +1,16 @@
-import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import React, { useCallback, useEffect, useState } from "react";
+import { Box, Grid, Typography, CircularProgress, Stack } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { firebaseAuth } from "../firebase";
+import { useDispatch } from "react-redux";
+import { clearUser, setUser } from "../store/userReducer";
 
 function Login() {
+  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -21,8 +27,48 @@ function Login() {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+
+  const loginUser = useCallback(async (email, password) => {
+    setLoading(true);
+    try {
+      await signInWithEmailAndPassword(firebaseAuth, email, password);
+      window.location.replace("/");
+    } catch (e) {
+      console.error(e);
+      e.message === "Firebase: Error (auth/user-not-found)." &&
+        alert("사용자를 찾을 수 없습니다.");
+      e.message === "Firebase: Error (auth/wrong-password)." &&
+        alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+      setLoading(false);
+    }
+  }, []);
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
+      if (!!user) {
+        dispatch(setUser(user));
+        localStorage.setItem("token", user.accessToken);
+      } else {
+        dispatch(clearUser());
+      }
+    });
+    return () => unsubscribe();
+  }, [dispatch]);
+
+  const onSubmit = (data) => {
+    loginUser(data.email, data.password);
+  };
+  if (loading) {
+    return (
+      <Stack alignItems="center" justifyContent="center" height="100vh">
+        <CircularProgress
+          size={150}
+          style={{
+            color: "#aa2727",
+          }}
+        />
+      </Stack>
+    );
+  }
 
   return (
     <div className="form">
@@ -58,24 +104,25 @@ function Login() {
                   LOGIN
                 </Typography>
                 <input
+                  name="email"
                   type="text"
-                  placeholder="id"
-                  {...register("id", {
+                  placeholder="email"
+                  {...register("email", {
                     required: true,
-                    minLength: 6,
-                    maxLength: 12,
+                    pattern:
+                      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                   })}
                 />
-                {errors.id?.type === "required" && (
-                  <span style={{ fontSize: "14px" }}>필수 항목입니다.</span>
+                {errors.email?.type === "required" && (
+                  <h5 style={{ fontSize: "14px" }}>필수 항목입니다.</h5>
                 )}
-                {errors.id?.type === "minLength" && (
-                  <span style={{ fontSize: "14px" }}>
-                    4글자 이상 입력해 주세요.
-                  </span>
+                {errors.email?.type === "pattern" && (
+                  <h5 style={{ fontSize: "14px" }}>
+                    유효한 이메일을 입력해 주세요.
+                  </h5>
                 )}
                 <input
-                  type="text"
+                  type="password"
                   placeholder="password"
                   {...register("password", {
                     required: true,
@@ -111,7 +158,7 @@ function Login() {
                     >
                       아직 회원이 아니신가요?
                     </Typography>
-                    <Link>Sign Up</Link>
+                    <Link to="/signup">Sign Up</Link>
                   </Box>
                   <Box
                     sx={{
