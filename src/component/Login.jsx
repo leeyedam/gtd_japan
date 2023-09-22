@@ -7,9 +7,13 @@ import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "../firebase";
 import { useDispatch } from "react-redux";
 import { clearUser, setUser } from "../store/userReducer";
+import LoginModal from "./LoginModal";
+import SEOMetaTag from "../SEOMetaTag";
 
 function Login() {
   const [loading, setLoading] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
   const dispatch = useDispatch();
   const theme = createTheme({
     breakpoints: {
@@ -47,6 +51,10 @@ function Login() {
       if (!!user) {
         dispatch(setUser(user));
         localStorage.setItem("token", user.accessToken);
+        localStorage.setItem(
+          "expirationTime",
+          user.stsTokenManager.expirationTime
+        );
       } else {
         dispatch(clearUser());
       }
@@ -72,6 +80,11 @@ function Login() {
 
   return (
     <div className="form">
+      <SEOMetaTag
+        title="LOGIN | GTD golf"
+        description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
+        keyword="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+      />
       <ThemeProvider theme={theme}>
         <Grid
           container
@@ -131,12 +144,12 @@ function Login() {
                   })}
                 />
                 {errors.password?.type === "required" && (
-                  <span style={{ fontSize: "14px" }}>필수 항목입니다.</span>
+                  <h5 style={{ fontSize: "14px" }}>필수 항목입니다.</h5>
                 )}
                 {errors.password?.type === "minLength" && (
-                  <span style={{ fontSize: "14px" }}>
+                  <h5 style={{ fontSize: "14px" }}>
                     6글자 이상 입력해 주세요.
-                  </span>
+                  </h5>
                 )}
                 <button type="submit" disabled={isSubmitting}>
                   LOGIN
@@ -175,10 +188,11 @@ function Login() {
                     >
                       비밀번호를 잊으셨나요?
                     </Typography>
-                    <Link>비밀번호 찾기</Link>
+                    <Link onClick={handleOpen}>비밀번호 찾기</Link>
                   </Box>
                 </Box>
               </form>
+              <LoginModal open={open} setOpen={setOpen} />
             </Box>
           </Grid>
         </Grid>

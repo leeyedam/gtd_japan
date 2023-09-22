@@ -130,8 +130,6 @@ function FourthSection() {
             xs={12}
             sm={12}
             md={6}
-            // data-aos="fade"
-            // data-aos-delay="200"
             sx={{
               marginTop: { xs: "40px", sm: "80px", md: "400px" },
               paddingLeft: { md: "50px" },
@@ -145,14 +143,21 @@ function FourthSection() {
               }}
             >
               {itemData.map((item, idx) => (
-                // key 값 item.img로 변경하기!!
-                <ImageListItem key={idx}>
-                  <img
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    alt={item.title}
-                    loading="lazy"
-                  />
+                <ImageListItem
+                  key={item.img}
+                  sx={{
+                    maxHeight: { md: "200px" },
+                  }}
+                >
+                  <a href={item.link} target="_blank">
+                    <img
+                      className="list-img"
+                      src={`${item.img}?w=248&fit=crop&auto=format`}
+                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      alt={item.title}
+                      loading="lazy"
+                    />
+                  </a>
                   <ImageListItemBar title={item.title} subtitle={item.author} />
                 </ImageListItem>
               ))}
@@ -168,97 +173,73 @@ export default FourthSection;
 
 const itemData = [
   {
-    img: "images/slide/1.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/1.Webp",
+    title: "GTD Driver",
+    author: "@버디천재",
+    link: "https://blog.naver.com/sue21/222957413546?&isInf=true",
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: "images/slide/2.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/2.Webp",
+    title: "GTD BLACK ICE 460",
+    author: "@스윙영웅",
+    link: "https://blog.naver.com/jhstyle1020/223208044910?&isInf=true",
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: "images/slide/3.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/3.Webp",
+    title: "GTD Driver",
+    author: "@버디천재",
+    link: "https://blog.naver.com/sue21/222720440670",
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: "images/slide/4.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/4.Webp",
+    title: "GTD 455",
+    author: "@super moon",
+    link: "https://blog.naver.com/mcteens/221049966134",
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: "images/slide/7.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/5.Webp",
+    title: "GT 455 Plus 2",
+    author: "@피그몬",
+    link: "https://blog.naver.com/wakai99/222647796593?&isInf=true",
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: "images/slide/8.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/6.Webp",
+    title: "GTD BLACK ICE 460",
+    author: "@sonjwi",
+    link: "https://www.instagram.com/p/CaYxA9KpNso/?img_index=1",
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: "images/slide/1.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/7.Webp",
+    title: "GTD BLACK ICE 460",
+    author: "@songdo_aboutgolf",
+    link: "https://www.instagram.com/p/CwrHToMvJUM/?img_index=1",
     rows: 2,
     cols: 2,
     featured: true,
   },
   {
-    img: "images/slide/2.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "images/slide/3.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "images/slide/4.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "images/slide/7.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "images/slide/8.Webp",
-    title: "Gtd",
-    author: "@bkristastucchio",
+    img: "images/review/8.Webp",
+    title: "BLACK ICE THE MAX",
+    author: "@jewelry__pro",
+    link: "https://www.instagram.com/p/CumMJphLM1s/?img_index=1",
     rows: 2,
     cols: 2,
     featured: true,

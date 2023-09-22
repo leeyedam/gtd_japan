@@ -1,18 +1,10 @@
 import React from "react";
-import { experimentalStyled as styled } from "@mui/material/styles";
-import { Paper, Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { woodData } from "./wood";
 import { Link } from "react-router-dom";
 
 function WoodLayout() {
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-    ...theme.typography.body2,
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  }));
   const theme = createTheme({
     breakpoints: {
       values: {

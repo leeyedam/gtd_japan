@@ -19,21 +19,16 @@ import TermsOfUse from "./TermsOfUse";
 import PrivacyPolicy from "./PrivacyPolicy";
 import FittingProductPageLayout from "./component/FittingProductPageLayout";
 import AccessoriesProductPageLayout from "./component/AccessoriesProductPageLayout";
-import { useDispatch, useSelector } from "react-redux";
-import { firebaseAuth } from "./firebase";
-import { onAuthStateChanged } from "firebase/auth";
-import { clearUser, setUser } from "./store/userReducer";
 
 function App() {
-  const dispatch = useDispatch();
-  const { isLoading, currentUser } = useSelector((state) => state.user);
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   });
   useEffect(() => {
-    if (Date.now() > currentUser?.stsTokenManager.expirationTime) {
+    const time = localStorage.getItem("expirationTime");
+    if (Date.now() > time && !!time) {
       localStorage.clear();
       window.location.reload();
     }
@@ -45,6 +40,7 @@ function App() {
         <SEOMetaTag
           title="GTD golf"
           description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
+          keyword="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
         />
         <Header />
         <Routes>

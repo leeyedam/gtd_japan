@@ -2,8 +2,6 @@ import React from "react";
 import {
   Box,
   Card,
-  CardActions,
-  CardContent,
   Divider,
   Grid,
   Typography,

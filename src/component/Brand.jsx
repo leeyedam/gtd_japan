@@ -1,27 +1,18 @@
 import React from "react";
-import { Box, Card, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import BrandHistory from "./brand/BrandHistory";
 import Academy from "./brand/Academy";
 import Change from "./brand/Change";
 import SEOMetaTag from "../SEOMetaTag";
 
 function Brand() {
-  const titleTextStyle = {
-    display: { xs: "flex", sm: "flex", md: "flex" },
-    position: "absolute",
-    fontSize: { xs: "26px", sm: "38px", md: "76px" },
-    lineHeight: { xs: "40px", sm: "55px", md: "95px" },
-    marginTop: { xs: "30px" },
-    marginBottom: { xs: "10px", sm: "25px", md: "25px" },
-  };
-  const titleFontStyle = {
-    fontFamily: "Giants-Inline",
-    fontWeight: 900,
-    textAlign: "left",
-  };
   return (
     <div>
-      <SEOMetaTag title="GTD golf" description="지티디" />
+      <SEOMetaTag
+        title="GTD golf"
+        description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
+        keyword="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+      />
       <Box
         align="center"
         width="100vw"

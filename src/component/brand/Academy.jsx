@@ -3,20 +3,17 @@ import { Box, Card, Grid, Typography } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function Academy() {
-  const titleTextStyle = {
-    display: { xs: "flex", sm: "flex", md: "flex" },
-    position: "absolute",
-    fontSize: { xs: "26px", sm: "38px", md: "76px" },
-    lineHeight: { xs: "40px", sm: "55px", md: "95px" },
-    marginTop: { xs: "30px" },
-    marginBottom: { xs: "10px", sm: "25px", md: "25px" },
+  const imgStyle = {
+    width: { xs: "320px", sm: "600px", md: "680px", xl: "920px" },
+    height: { xs: "213px", sm: "400px", md: "800px" },
+    top: { xs: "2%", sm: "5%", md: "15%" },
+    left: { xs: "0%", sm: "0%", md: "0%" },
+    borderRadius: "20px",
   };
-  const titleFontStyle = {
-    fontFamily: "Giants-Inline",
-    fontWeight: 900,
-    textAlign: "left",
+  const fontStyle = {
+    fontFamily: "NanumSquareNeo-Variable",
+    color: "#fff",
   };
-
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -51,7 +48,6 @@ function Academy() {
               maxWidth: {
                 xs: "320px",
                 sm: "600px",
-                // md: "1400px",
                 xl: "2000px",
               },
               height: { xs: "380px", sm: "400px", md: "800px" },
@@ -73,24 +69,15 @@ function Academy() {
               backgroundColor="#0000002b"
               zIndex={5}
               borderRadius="20px"
-              sx={{
-                width: { xs: "320px", sm: "600px", md: "680px" },
-                height: { xs: "213px", sm: "400px", md: "800px" },
-                top: { xs: "2%", sm: "5%", md: "15%" },
-                left: { xs: "0%", sm: "0%", md: "0%" },
-              }}
+              sx={imgStyle}
             />
 
             <Box
               position="absolute"
               component="img"
               sx={{
-                width: { xs: "320px", sm: "600px", md: "680px", xl: "920px" },
-                height: { xs: "213px", sm: "400px", md: "800px" },
-                top: { xs: "2%", sm: "5%", md: "15%" },
-                left: { xs: "0%", sm: "0%", md: "0%" },
+                ...imgStyle,
                 objectFit: "cover",
-                borderRadius: "20px",
               }}
               src="images/brand/3.Webp"
               alt="gtd"
@@ -114,9 +101,8 @@ function Academy() {
               right: { xs: "18%", sm: "10%", md: "0%" },
             }}
             style={{
-              fontFamily: "NanumSquareNeo-Variable",
+              ...fontStyle,
               fontWeight: 900,
-              color: "#fff",
             }}
           >
             GTD Academy
@@ -140,8 +126,7 @@ function Academy() {
               right: { sm: "10%", md: "0%" },
             }}
             style={{
-              fontFamily: "NanumSquareNeo-Variable",
-              color: "#fff",
+              ...fontStyle,
               textAlign: "right",
             }}
           >
@@ -163,8 +148,7 @@ function Academy() {
               left: { sm: "10%", md: "9%" },
             }}
             style={{
-              fontFamily: "NanumSquareNeo-Variable",
-              color: "#fff",
+              ...fontStyle,
               textAlign: "left",
             }}
           >

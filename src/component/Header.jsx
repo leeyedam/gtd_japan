@@ -24,8 +24,9 @@ function Header() {
   const [login, setLogin] = useState(false);
   const buttonStyle = { my: 2, color: "white", display: "block" };
   const logoTextStyle = {
-    mr: 2,
+    my: 2,
     display: { xs: "none", md: "flex" },
+    width: "110px",
     height: "40px",
     textDecoration: "none",
   };
@@ -190,17 +191,11 @@ function Header() {
                 </Button>
               );
             })}
-            <Typography
-              variant="h1"
-              component="a"
-              href="/"
-              sx={{
-                ...logoTextStyle,
-                marginTop: "14px",
-              }}
-            >
-              <img src={require("../assets/images/logo.png")} alt="logo" />
-            </Typography>
+            <Button sx={logoTextStyle} className="logo">
+              <Link to="/">
+                <img src={require("../assets/images/logo.png")} alt="logo" />
+              </Link>
+            </Button>
             {right.map((page) => {
               return login && page.name === "LOGOUT" ? (
                 <Button

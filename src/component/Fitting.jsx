@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Box, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import DriverLayout from "./fittingProduct/DriverLayout";
 import WoodLayout from "./fittingProduct/WoodLayout";
@@ -57,8 +57,8 @@ function Fitting() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1200,
-        xl: 2600,
+        lg: 1800,
+        xl: 2300,
       },
     },
   });
@@ -92,7 +92,7 @@ function Fitting() {
               xs: "10px",
               sm: "40px",
               md: "300px",
-              xl: "800px",
+              xl: "440px",
             },
             color: "#fff",
             maxWidth: {

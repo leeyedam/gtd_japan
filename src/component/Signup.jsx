@@ -14,6 +14,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { firebaseAuth } from "../firebase";
+import SEOMetaTag from "../SEOMetaTag";
 
 function Signup() {
   const [loading, setLoading] = useState(false);
@@ -80,6 +81,11 @@ function Signup() {
 
   return (
     <div className="form">
+      <SEOMetaTag
+        title="GTD golf"
+        description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
+        keyword="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+      />
       <ThemeProvider theme={theme}>
         <Grid
           container

@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useParams } from "react-router-dom";
 import React from "react";

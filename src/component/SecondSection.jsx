@@ -122,8 +122,6 @@ function SecondSection() {
             xs={10}
             sm={12}
             md={7}
-            // data-aos="fade"
-            // data-aos-delay="200"
             sx={{
               marginTop: { xs: "40px", sm: "80px", md: "400px" },
               paddingLeft: { md: "10px" },
@@ -155,8 +153,6 @@ function SecondSection() {
               개발하는 목표이다.
             </Typography>
             <Typography
-              // data-aos="fade-left"
-              // data-aos-delay="300"
               sx={{
                 display: { xs: "flex", sm: "flex", md: "none" },
                 maxWidth: { xs: "320px", sm: "100vw" },
@@ -195,8 +191,6 @@ function SecondSection() {
               'Dream Stick'을
             </Typography>
             <Typography
-              // data-aos="fade-left"
-              // data-aos-delay="300"
               sx={{
                 display: { xs: "flex", sm: "flex", md: "none" },
                 maxWidth: { xs: "320px", sm: "100vw" },
