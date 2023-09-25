@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useParams } from "react-router-dom";
 import React from "react";
 import Slider from "react-slick";
+import SEOMetaTag from "../SEOMetaTag";
 
 function FittingProductPageLayout() {
   let product = useParams();
@@ -36,6 +37,11 @@ function FittingProductPageLayout() {
   });
   return (
     <div className="product-page">
+      <SEOMetaTag
+        title="FITTING | GTD golf"
+        description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
+        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+      />
       <ThemeProvider theme={theme}>
         <Grid
           container

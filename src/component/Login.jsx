@@ -83,7 +83,7 @@ function Login() {
       <SEOMetaTag
         title="LOGIN | GTD golf"
         description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
-        keyword="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
       />
       <ThemeProvider theme={theme}>
         <Grid
