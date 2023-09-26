@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { Box, Divider, createTheme } from "@mui/material";
+import SEOMetaTag from "./SEOMetaTag";
 
 function PrivacyPolicy() {
   const theme = createTheme({
@@ -16,6 +17,13 @@ function PrivacyPolicy() {
   });
   return (
     <div className="terms">
+      <SEOMetaTag
+        title="FITTING | GTD golf"
+        description="GTD golf"
+        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        imgsrc="https://gtdtest-2.web.app/images/slide/1.Webp"
+        url="https://gtdtest-2.web.app/policy"
+      />
       <ThemeProvider theme={theme}>
         <Box
           sx={{

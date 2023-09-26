@@ -12,6 +12,7 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "../firebase";
+import SEOMetaTag from "../SEOMetaTag";
 
 function Guarantee() {
   const [loading, setLoading] = useState(false);
@@ -87,6 +88,13 @@ function Guarantee() {
 
   return (
     <div className="form">
+      <SEOMetaTag
+        title="GTD golf"
+        description="GTD golf"
+        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        imgsrc="https://gtdtest-2.web.app/images/slide/1.Webp"
+        url="https://gtdtest-2.web.app/guarantee"
+      />
       <ThemeProvider theme={theme}>
         <Grid
           container

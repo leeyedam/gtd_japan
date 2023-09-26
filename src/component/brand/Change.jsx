@@ -158,7 +158,7 @@ function Change() {
                 objectFit: "cover",
               }}
               src="images/brand/2.Webp"
-              alt="gtd"
+              alt="CHANGE THE GAME"
             />
           </Card>
         </Grid>

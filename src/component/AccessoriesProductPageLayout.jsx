@@ -39,8 +39,10 @@ function AccessoriesProductPageLayout() {
     <div className="product-page">
       <SEOMetaTag
         title="ACCESSORIES | GTD golf"
-        description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
+        description="GTD golf"
         keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        imgsrc="https://gtdtest-2.web.app/images/slide/1.Webp"
+        url="https://gtdtest-2.web.app/accessories"
       />
       <ThemeProvider theme={theme}>
         <Grid

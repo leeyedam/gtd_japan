@@ -170,7 +170,7 @@ function ThirdSection() {
                     objectFit: "cover",
                   }}
                   src="images/slide/16.png"
-                  alt="gtd"
+                  alt="BEGINNING OF TRIPLE TITAN"
                 />
               </Card>
             </Grid>

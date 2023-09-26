@@ -96,7 +96,7 @@ function SecondSection() {
                 maxWidth: { sm: "150px" },
               }}
               src="images/title2.png"
-              alt="gtd"
+              alt="BRAND HISTORY OF THE GTD GOLF"
             />
             <Card
               sx={{

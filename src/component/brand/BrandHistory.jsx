@@ -58,7 +58,7 @@ function BrandHistory() {
               objectFit: "cover",
             }}
             src="images/brand/1.Webp"
-            alt="gtd"
+            alt="BRAND HISTORY OF THE GTD GOLF"
           />
           <Typography
             data-aos="fade-up"

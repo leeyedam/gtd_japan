@@ -55,7 +55,7 @@ function FirstSection() {
                 objectFit: "cover",
               }}
               src="images/slide/1.Webp"
-              alt="gtd"
+              alt="FITTING LINE"
               fetchpriority="high"
             />
             <Box
@@ -67,7 +67,7 @@ function FirstSection() {
                 objectPosition: "41% 50%",
               }}
               src="images/slide/1_sm.Webp"
-              alt="gtd"
+              alt="FITTING LINE"
               fetchpriority="high"
             />
           </Box>
@@ -89,7 +89,7 @@ function FirstSection() {
               component="img"
               sx={slideImageStyle}
               src="images/slide/10.Webp"
-              alt="gtd"
+              alt="ACCESSORIES LINE"
               fetchpriority="high"
             />
           </Box>
@@ -111,7 +111,7 @@ function FirstSection() {
               component="img"
               sx={slideImageStyle}
               src="images/slide/3.Webp"
-              alt="gtd"
+              alt="GUARANTEE"
               fetchpriority="high"
             />
           </Box>

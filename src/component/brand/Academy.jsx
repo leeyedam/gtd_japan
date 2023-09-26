@@ -80,7 +80,7 @@ function Academy() {
                 objectFit: "cover",
               }}
               src="images/brand/3.Webp"
-              alt="gtd"
+              alt="GTD ACADEMY & TEAM GEORGE"
             />
           </Card>
         </Grid>

@@ -104,7 +104,7 @@ function FourthSection() {
                 maxWidth: { sm: "150px" },
               }}
               src="images/title3.png"
-              alt="gtd"
+              alt="USER REVIEWS OF THE GTD GOLF"
             />
             <Card
               sx={{
@@ -121,7 +121,7 @@ function FourthSection() {
                   maxWidth: { xs: "100%", sm: "100%", md: "100%" },
                 }}
                 src="images/slide/17.Webp"
-                alt="gtd"
+                alt="USER REVIEWS OF THE GTD GOLF"
               />
             </Card>
           </Grid>

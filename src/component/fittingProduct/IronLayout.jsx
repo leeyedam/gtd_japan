@@ -60,7 +60,7 @@ function IronLayout() {
                     objectFit: "cover",
                   }}
                   src={data.img}
-                  alt="gtd"
+                  alt={data.id}
                 />
               </Link>
               <Typography component={"div"}>{data.title}</Typography>
