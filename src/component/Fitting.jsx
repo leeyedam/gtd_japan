@@ -75,8 +75,8 @@ function Fitting() {
         title="FITTING | GTD golf"
         description="GTD golf"
         keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
-        imgsrc="https://gtdtest-2.web.app/images/slide/1.Webp"
-        url="https://gtdtest-2.web.app/fitting"
+        imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
+        url="https://gtdgolfkorea.web.app/fitting"
       />
       <ThemeProvider theme={theme}>
         <Box
