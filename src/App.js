@@ -41,6 +41,7 @@ function App() {
           title="GTD golf"
           description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
           keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+          url="https://gtdtest-2.web.app/"
         />
         <Header />
         <Routes>
