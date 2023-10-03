@@ -39,7 +39,7 @@ function App() {
       <div className="App">
         <SEOMetaTag
           title="GTD golf"
-          description="GTD golf"
+          description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
           keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
           imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
           url="https://gtdgolfkorea.web.app/"

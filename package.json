@@ -14,6 +14,7 @@
     "aos": "^2.3.4",
     "dotenv": "^16.3.1",
     "firebase": "^10.3.1",
+    "firebase-tools": "^12.6.1",
     "firestore-export-import": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

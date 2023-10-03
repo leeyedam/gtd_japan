@@ -71,7 +71,7 @@ function BrandHistory() {
               marginBottom: { xs: "250px", sm: "25px", md: "25px" },
               textAlign: { xs: "center", sm: "left", md: "left" },
               top: { xs: "3%", sm: "5%", md: "15%" },
-              left: { xs: "19%", sm: "20%", md: "23%", lg: "22%", xl: "27%" },
+              left: { xs: "19%", sm: "20%", md: "20%", lg: "22%", xl: "27%" },
             }}
             style={{
               fontFamily: "NanumSquareNeo-Variable",
@@ -95,7 +95,7 @@ function BrandHistory() {
               marginBottom: { md: "20px" },
               fontWeight: { md: 500 },
               top: { sm: "56%", md: "65%" },
-              left: { sm: "20%", md: "9%", lg: "22%", xl: "27%" },
+              left: { sm: "20%", md: "20%", lg: "22%", xl: "27%" },
             }}
             style={subTitleFontStyle}
           >
