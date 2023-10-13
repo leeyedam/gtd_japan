@@ -153,7 +153,13 @@ function Header() {
                 );
               })}
               {right.map((page) => {
-                return (
+                return login && page.name === "LOGOUT" ? (
+                  <MenuItem key={page.name} onClick={() => handleLogout()}>
+                    <Typography textAlign="center" color="#fff">
+                      {page.name}
+                    </Typography>
+                  </MenuItem>
+                ) : (
                   <MenuItem
                     key={page.name}
                     onClick={() => handleCloseNavMenu(page.link)}

@@ -62,7 +62,7 @@ function ThirdSection() {
                   sm: "60px",
                   md: "360px",
                   lg: "400px",
-                  xl: "580px",
+                  xl: "150px",
                 },
                 textAlign: "left",
               }}
@@ -145,7 +145,7 @@ function ThirdSection() {
                 sx={{
                   position: "absolute",
                   top: { xs: "37%", sm: "5%", md: "-20%" },
-                  right: { xs: "20%", sm: "-10%", md: "8%", xl: "25%" },
+                  right: { xs: "20%", sm: "-10%", md: "8%", xl: "15%" },
                   maxHeight: { xs: "220px", sm: "480px", md: "1000px" },
                   maxWidth: { xs: "220px", sm: "480px", md: "100%" },
                   marginTop: { md: "30px" },

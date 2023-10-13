@@ -36,32 +36,30 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App">
-        <SEOMetaTag
-          title="GTD golf"
-          description="Beginning of Triple Titan 트리플 티탄 드라이버의 시작"
-          keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
-          imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
-          url="https://gtdgolfkorea.web.app/"
+      <SEOMetaTag
+        title="GTD golf"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF"
+        imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
+        url="https://gtdgolfkorea.web.app/"
+      />
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/brand" element={<Brand />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/guarantee" element={<Guarantee />} />
+        <Route path="/fitting" element={<Fitting />} />
+        <Route path="/accessories" element={<Accessories />} />
+        <Route path="/terms" element={<TermsOfUse />} />
+        <Route path="/policy" element={<PrivacyPolicy />} />
+        <Route path="/fitting/:id" element={<FittingProductPageLayout />} />
+        <Route
+          path="/accessories/:id"
+          element={<AccessoriesProductPageLayout />}
         />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/brand" element={<Brand />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/guarantee" element={<Guarantee />} />
-          <Route path="/fitting" element={<Fitting />} />
-          <Route path="/accessories" element={<Accessories />} />
-          <Route path="/terms" element={<TermsOfUse />} />
-          <Route path="/policy" element={<PrivacyPolicy />} />
-          <Route path="/product/:id" element={<FittingProductPageLayout />} />
-          <Route
-            path="/accessories/:id"
-            element={<AccessoriesProductPageLayout />}
-          />
-        </Routes>
-      </div>
+      </Routes>
       <Footer />
     </div>
   );

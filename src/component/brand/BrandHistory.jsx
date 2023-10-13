@@ -57,7 +57,7 @@ function BrandHistory() {
               borderRadius: "20px",
               objectFit: "cover",
             }}
-            src="images/brand/1.Webp"
+            src="https://gtdgolfkorea.web.app/images/brand/1.Webp"
             alt="BRAND HISTORY OF THE GTD GOLF"
           />
           <Typography

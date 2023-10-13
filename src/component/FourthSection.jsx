@@ -173,7 +173,7 @@ export default FourthSection;
 
 const itemData = [
   {
-    img: "images/review/1.Webp",
+    img: `${process.env.REACT_APP_URL}images/review/1.Webp`,
     title: "GTD Driver",
     author: "@버디천재",
     link: "https://blog.naver.com/sue21/222957413546?&isInf=true",

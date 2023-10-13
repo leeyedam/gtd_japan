@@ -1,19 +1,19 @@
 export const bagData = [
   {
-    id: "STAND BAG(BLACK)",
+    id: "STAND-BAG(BLACK)",
     img: "images/accessories/STAND-BAG(Black).Webp",
     title: "STAND BAG (BLACK)",
-    link: "STAND BAG(BLACK)",
+    link: "STAND-BAG(BLACK)",
     price: "559,000",
-    src: "images/gtdProduct/STAND BAG(BLACK)",
+    src: "images/gtdProduct/STANDBAG(BLACK)",
   },
   {
-    id: "STAND BAG(WHITE)",
+    id: "STAND-BAG(WHITE)",
     img: "images/accessories/STAND-BAG(White).Webp",
     title: "STAND BAG (WHITE)",
-    link: "STAND BAG(WHITE)",
+    link: "STAND-BAG(WHITE)",
     price: "559,000",
-    src: "images/gtdProduct/STAND BAG(WHITE)",
+    src: "images/gtdProduct/STANDBAG(WHITE)",
   },
   {
     id: "BOSTON-BAG(Black)",

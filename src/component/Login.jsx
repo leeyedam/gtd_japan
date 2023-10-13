@@ -12,7 +12,7 @@ import SEOMetaTag from "../SEOMetaTag";
 
 function Login() {
   const [loading, setLoading] = useState(false);
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const dispatch = useDispatch();
   const theme = createTheme({
@@ -39,31 +39,42 @@ function Login() {
       window.location.replace("/");
     } catch (e) {
       console.error(e);
-      e.message === "Firebase: Error (auth/user-not-found)." &&
-        alert("사용자를 찾을 수 없습니다.");
-      e.message === "Firebase: Error (auth/wrong-password)." &&
-        alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+      e && alert("아이디 또는 비밀번호를 확인해 주세요.");
       setLoading(false);
     }
   }, []);
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
+  //     if (!!user) {
+  //       dispatch(setUser(user));
+  //       localStorage.setItem("token", user?.accessToken);
+  //       localStorage.setItem(
+  //         "expirationTime",
+  //         user?.stsTokenManager.expirationTime
+  //       );
+  //       localStorage.setItem("uid", user?.uid);
+  //     } else {
+  //       dispatch(clearUser());
+  //     }
+  //   });
+  //   return () => unsubscribe();
+  // }, [dispatch]);
+
+  const onSubmit = (data) => {
+    loginUser(data.email, data.password);
+    onAuthStateChanged(firebaseAuth, (user) => {
       if (!!user) {
         dispatch(setUser(user));
-        localStorage.setItem("token", user.accessToken);
+        localStorage.setItem("token", user?.accessToken);
         localStorage.setItem(
           "expirationTime",
-          user.stsTokenManager.expirationTime
+          user?.stsTokenManager.expirationTime
         );
+        localStorage.setItem("uid", user?.uid);
       } else {
         dispatch(clearUser());
       }
     });
-    return () => unsubscribe();
-  }, [dispatch]);
-
-  const onSubmit = (data) => {
-    loginUser(data.email, data.password);
   };
   if (loading) {
     return (
@@ -82,8 +93,8 @@ function Login() {
     <div className="form">
       <SEOMetaTag
         title="GTD golf"
-        description="GTD golf"
-        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF"
         imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
         url="https://gtdgolfkorea.web.app/login"
       />

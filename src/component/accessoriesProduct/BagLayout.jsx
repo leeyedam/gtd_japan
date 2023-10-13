@@ -67,7 +67,7 @@ function BagLayout() {
                     },
                     objectFit: "cover",
                   }}
-                  src={data.img}
+                  src={`https://gtdgolfkorea.web.app/${data.img}`}
                   alt={data.id}
                 />
               </Link>

@@ -41,7 +41,7 @@ function WedgeLayout() {
         >
           {wedgeData.map((data) => (
             <Grid item xs={4} sm={12} md={4} key={data.title}>
-              <Link to={`/product/${data.link}`}>
+              <Link to={`/fitting/${data.link}`}>
                 <Box
                   component="img"
                   sx={{
@@ -59,7 +59,7 @@ function WedgeLayout() {
                     },
                     objectFit: "cover",
                   }}
-                  src={data.img}
+                  src={`https://gtdgolfkorea.web.app/${data.img}`}
                   alt={data.id}
                 />
               </Link>

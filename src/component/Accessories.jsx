@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Box, Tab, Tabs } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -35,7 +35,7 @@ function a11yProps(index) {
 }
 
 function Accessories() {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -56,8 +56,8 @@ function Accessories() {
     <div className="fitting">
       <SEOMetaTag
         title="ACCESSORIES | GTD golf"
-        description="GTD golf"
-        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF"
         imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
         url="https://gtdgolfkorea.web.app/accessories"
       />
@@ -67,7 +67,7 @@ function Accessories() {
             flexGrow: 1,
             backgroundColor: "transparent",
             display: "flex",
-            height: "80vh",
+            minHeight: "80vh",
             marginTop: {
               xs: "40px",
               sm: "100px",
@@ -92,7 +92,6 @@ function Accessories() {
         >
           <Tabs
             orientation="vertical"
-            variant="scrollable"
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs example"

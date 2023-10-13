@@ -157,7 +157,7 @@ function Change() {
                 ...imgStyle,
                 objectFit: "cover",
               }}
-              src="images/brand/2.Webp"
+              src="https://gtdgolfkorea.web.app/images/brand/2.Webp"
               alt="CHANGE THE GAME"
             />
           </Card>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Tab, Tabs } from "@mui/material";
@@ -41,7 +41,7 @@ function a11yProps(index) {
 function Fitting() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -73,8 +73,8 @@ function Fitting() {
     <div className="fitting">
       <SEOMetaTag
         title="FITTING | GTD golf"
-        description="GTD golf"
-        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF, 골프백, 드라이버, 아이언"
         imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
         url="https://gtdgolfkorea.web.app/fitting"
       />
@@ -84,7 +84,7 @@ function Fitting() {
             flexGrow: 1,
             backgroundColor: "transparent",
             display: "flex",
-            height: "80vh",
+            minHeight: "80vh",
             marginTop: {
               xs: "40px",
               sm: "100px",
@@ -109,7 +109,6 @@ function Fitting() {
         >
           <Tabs
             orientation="vertical"
-            variant="scrollable"
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs example"

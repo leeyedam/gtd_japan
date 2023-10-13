@@ -110,19 +110,19 @@ body {
   color: #fff;
 }
 
-.slick-slide:focus,
-.slick-slide div {
+.first-section .slick-slide:focus,
+.first-section .slick-slide div {
   outline: none;
 }
 
-.slick-active .title,
-.slick-active .detail {
+.first-section .slick-active .title,
+.first-section .slick-active .detail {
   animation: fadein 3s;
   transform: translate(0, 10vh);
   transition: all 2s;
 }
 
-.slick-dots {
+.first-section .slick-dots {
   bottom: 25px !important;
 }
 
@@ -132,6 +132,22 @@ body {
 
 .first-section .slick-dots li.slick-active button:before {
   color: #fff !important;
+}
+
+.product-page .slick-slide:focus,
+.product-page .slick-slide div {
+  outline: none;
+}
+
+.product-page .slick-active .title,
+.product-page .slick-active .detail {
+  animation: fadein 3s;
+  transform: translate(0, 10vh);
+  transition: all 2s;
+}
+
+.product-page .slick-dots {
+  bottom: 25px !important;
 }
 
 .second-section {
@@ -231,8 +247,19 @@ form h5 {
 .form a {
   text-decoration: none;
   color: #fff;
-  font-weight: 700;
+  font-weight: 500;
   padding-left: 10px;
+  padding-right: 8px;
+}
+
+form .border::before,
+form .border::after {
+  border-top: thin solid #ffffff4a;
+}
+
+form .border svg {
+  vertical-align: top;
+  margin-left: 5px;
 }
 
 form h5::before {
@@ -282,6 +309,7 @@ form h5::before {
   padding: 15px;
   margin-bottom: 55px;
   font-size: 14px;
+  text-align: center;
 }
 
 form .emailCheck {
@@ -305,3 +333,7 @@ form .h5 {
   width: 100%;
   max-height: 200px;
 }
+
+/* .fitting svg {
+  display: none;
+} */

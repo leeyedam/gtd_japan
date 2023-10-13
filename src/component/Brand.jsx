@@ -9,9 +9,9 @@ function Brand() {
   return (
     <div>
       <SEOMetaTag
-        title="GTD golf"
-        description="GTD golf"
-        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        title="GTD golf | Brand"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF, 조지 다케이, GT455"
         imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
         url="https://gtdgolfkorea.web.app/brand"
       />

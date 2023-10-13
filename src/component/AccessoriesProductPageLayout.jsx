@@ -30,8 +30,8 @@ function AccessoriesProductPageLayout() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1200,
-        xl: 2600,
+        lg: 1800,
+        xl: 2300,
       },
     },
   });
@@ -39,8 +39,8 @@ function AccessoriesProductPageLayout() {
     <div className="product-page">
       <SEOMetaTag
         title="ACCESSORIES | GTD golf"
-        description="GTD golf"
-        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF, GTD KOREA, GOLF BAG"
         imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
         url="https://gtdgolfkorea.web.app/accessories"
       />
@@ -79,40 +79,40 @@ function AccessoriesProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={require(`../assets/images/gtdProduct/${product.id}/1.jpg`)}
-                alt="gtd"
+                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/1.jpg`}
+                alt="gtd golf"
               />
               <Box
                 component="img"
                 sx={{
                   objectFit: "cover",
                 }}
-                src={require(`../assets/images/gtdProduct/${product.id}/2.jpg`)}
-                alt="gtd"
+                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/2.jpg`}
+                alt="gtd golf"
               />
               <Box
                 component="img"
                 sx={{
                   objectFit: "cover",
                 }}
-                src={require(`../assets/images/gtdProduct/${product.id}/3.jpg`)}
-                alt="gtd"
+                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/3.jpg`}
+                alt="gtd golf"
               />
               <Box
                 component="img"
                 sx={{
                   objectFit: "cover",
                 }}
-                src={require(`../assets/images/gtdProduct/${product.id}/4.jpg`)}
-                alt="gtd"
+                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/4.jpg`}
+                alt="gtd golf"
               />
               <Box
                 component="img"
                 sx={{
                   objectFit: "cover",
                 }}
-                src={require(`../assets/images/gtdProduct/${product.id}/5.jpg`)}
-                alt="gtd"
+                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/5.jpg`}
+                alt="gtd golf"
               />
             </Slider>
           </Grid>
@@ -122,18 +122,15 @@ function AccessoriesProductPageLayout() {
             sm={12}
             md={4}
             lg={4}
-            xl={2}
+            xl={3.5}
             sx={{
               maxHeight: {
                 md: "400px",
                 lg: "620px",
-                xl: "750px",
+                xl: "650px",
               },
               overflowY: "scroll",
               overflowX: "hidden",
-              marginTop: {
-                xl: "150px",
-              },
             }}
           >
             <Box
@@ -151,8 +148,8 @@ function AccessoriesProductPageLayout() {
                 },
                 objectFit: "cover",
               }}
-              src={require(`../assets/images/gtdProduct/${product.id}/6.jpg`)}
-              alt="gtd"
+              src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/6.jpg`}
+              alt="gtd golf"
             />
           </Grid>
         </Grid>

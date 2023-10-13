@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import FirstSectionText from "./FirstSectionText";
+import SEOMetaTag from "../SEOMetaTag";
 
 function FirstSection() {
   const settings = {
@@ -37,6 +38,13 @@ function FirstSection() {
 
   return (
     <div className="first-section">
+      <SEOMetaTag
+        title="GTD golf"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF, GTD KOREA, GTD 드라이버"
+        imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
+        url="https://gtdgolfkorea.web.app/"
+      />
       <ThemeProvider theme={theme}>
         <Slider {...settings}>
           <Box position="relative" align="center" width="100vw" height="100vh">
@@ -54,7 +62,7 @@ function FirstSection() {
                 width: { xs: "0px", sm: "0px", md: "100vw" },
                 objectFit: "cover",
               }}
-              src="images/slide/1.Webp"
+              src="https://gtdgolfkorea.web.app/images/slide/1.Webp"
               alt="FITTING LINE"
               fetchpriority="high"
             />
@@ -66,7 +74,7 @@ function FirstSection() {
                 objectFit: "cover",
                 objectPosition: "41% 50%",
               }}
-              src="images/slide/1_sm.Webp"
+              src="https://gtdgolfkorea.web.app/images/slide/1_sm.Webp"
               alt="FITTING LINE"
               fetchpriority="high"
             />
@@ -88,7 +96,7 @@ function FirstSection() {
             <Box
               component="img"
               sx={slideImageStyle}
-              src="images/slide/10.Webp"
+              src="https://gtdgolfkorea.web.app/images/slide/10.Webp"
               alt="ACCESSORIES LINE"
               fetchpriority="high"
             />
@@ -110,7 +118,7 @@ function FirstSection() {
             <Box
               component="img"
               sx={slideImageStyle}
-              src="images/slide/3.Webp"
+              src="https://gtdgolfkorea.web.app/images/slide/3.Webp"
               alt="GUARANTEE"
               fetchpriority="high"
             />
@@ -121,4 +129,4 @@ function FirstSection() {
   );
 }
 
-export default React.memo(FirstSection);
+export default FirstSection;

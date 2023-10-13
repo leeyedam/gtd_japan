@@ -79,7 +79,7 @@ function Academy() {
                 ...imgStyle,
                 objectFit: "cover",
               }}
-              src="images/brand/3.Webp"
+              src="https://gtdgolfkorea.web.app/images/brand/3.Webp"
               alt="GTD ACADEMY & TEAM GEORGE"
             />
           </Card>

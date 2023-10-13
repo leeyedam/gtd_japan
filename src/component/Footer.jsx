@@ -41,18 +41,18 @@ function Footer() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1200,
-        xl: 2600,
+        lg: 1800,
+        xl: 2300,
       },
     },
   });
   return (
-    <div className="footer">
+    <footer className="footer">
       <ThemeProvider theme={theme}>
         <Box
           width="100vw"
           sx={{
-            height: { xs: "270px", sm: "330px", md: "320px" },
+            height: { xs: "270px", sm: "330px", md: "330px" },
             maxWidth: { xs: "100vw", sm: "100vw", md: "100vw" },
             overflow: { sm: "hidden", md: "visible" },
           }}
@@ -81,10 +81,10 @@ function Footer() {
               lg={7}
               sx={{
                 paddingLeft: {
-                  sm: "40px",
-                  md: "50px",
-                  lg: "460px",
-                  xl: "1000px",
+                  sm: "50px",
+                  md: "200px",
+                  lg: "480px",
+                  xl: "600px",
                 },
                 textAlign: "left",
               }}
@@ -201,7 +201,7 @@ function Footer() {
           </Grid>
         </Box>
       </ThemeProvider>
-    </div>
+    </footer>
   );
 }
 

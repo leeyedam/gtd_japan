@@ -1,8 +1,16 @@
 import React, { useCallback, useState } from "react";
-import { Box, CircularProgress, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  CircularProgress,
+  Divider,
+  Grid,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useForm } from "react-hook-form";
 import {
+  arrayUnion,
   collection,
   doc,
   getDocs,
@@ -13,9 +21,19 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase";
 import SEOMetaTag from "../SEOMetaTag";
+import CodeCheckList from "./CodeCheckList";
+import { Link } from "react-router-dom";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 
 function Guarantee() {
   const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [myList, setMyList] = useState([]);
+  const year = new Date().getFullYear();
+  const month = new Date().getMonth() + 1;
+  const day = new Date().getDate();
+  const date = `${year}/${month}/${day}`;
+
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -33,17 +51,66 @@ function Guarantee() {
     formState: { errors, isSubmitting },
   } = useForm();
 
+  const checkCodeList = useCallback(async () => {
+    setLoading(true);
+    try {
+      const uid = localStorage.getItem("uid");
+      const userRef = query(
+        collection(getFirestore(), "users"),
+        where("uid", "==", uid)
+      );
+      const querySnapshot = await getDocs(userRef);
+      const codeList =
+        querySnapshot.docs[0]._document.data.value.mapValue.fields.code;
+      setMyList([]);
+      if (codeList !== undefined) {
+        codeList.arrayValue.values.map((arr) => {
+          setMyList((prev) => [...prev, arr.stringValue]);
+        });
+      }
+      setLoading(false);
+      setOpen(true);
+    } catch (error) {
+      console.log(error.message);
+      if (
+        error.message ===
+        "Cannot read properties of undefined (reading '_document')"
+      ) {
+        alert("로그인이 필요한 서비스입니다.");
+        window.location.replace("/login");
+      }
+      setLoading(false);
+    }
+  }, []);
+
+  const handleOpen = () => {
+    checkCodeList();
+  };
+
+  const nameFilter = (name) => {
+    if (name.includes("460")) {
+      return "BLACK ICE 460";
+    } else if (name.includes("FW")) {
+      return "BLACK ICE - FW";
+    } else if (name.includes("MAX")) {
+      return "BLACK ICE THE MAX";
+    } else if (name.includes("UT")) {
+      return "BLACK ICE - UT";
+    } else {
+      return name;
+    }
+  };
+
   const checkGuarantee = useCallback(async (number) => {
     setLoading(true);
     try {
-      const userRef = query(
+      const numberRef = query(
         collection(getFirestore(), "numberTest"),
         where("number", "==", number)
       );
-      const querySnapshot = await getDocs(userRef);
+      const querySnapshot = await getDocs(numberRef);
       const documentNumber =
         querySnapshot?.docs[0]?._document.key.path.segments[6];
-
       if (
         querySnapshot.docs[0]._document.data.value.mapValue.fields.check !==
         undefined
@@ -51,8 +118,19 @@ function Guarantee() {
         alert("이미 인증된 코드입니다.");
         window.location.reload();
       } else if (querySnapshot.empty === false) {
+        const uid = localStorage.getItem("uid");
         const nycRef = doc(db, "numberTest", documentNumber);
+        const userRef = doc(db, "users", uid);
         await updateDoc(nycRef, { check: true });
+        await updateDoc(userRef, {
+          code: arrayUnion(
+            JSON.stringify({
+              클럽명: nameFilter(number),
+              코드: number,
+              날짜: date,
+            })
+          ),
+        });
         alert("인증이 완료되었습니다.");
         window.location.replace("/");
       }
@@ -90,8 +168,8 @@ function Guarantee() {
     <div className="form">
       <SEOMetaTag
         title="GTD golf"
-        description="GTD golf"
-        keywords="GOLF, GOLF BAG, GEAR, Driver, Wood, Utility, Iron, Wedge, Putter, CLUB, FITTING, Premium"
+        description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
+        keywords="GTD, GTD GOLF"
         imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
         url="https://gtdgolfkorea.web.app/guarantee"
       />
@@ -152,7 +230,17 @@ function Guarantee() {
                 <button type="submit" disabled={isSubmitting}>
                   등록하기
                 </button>
+
+                <Divider className="border">
+                  <div>
+                    <Link onClick={handleOpen}>
+                      인증 내역 조회
+                      <ArrowOutwardIcon fontSize="small" />
+                    </Link>
+                  </div>
+                </Divider>
               </form>
+              <CodeCheckList open={open} setOpen={setOpen} myList={myList} />
             </Box>
           </Grid>
         </Grid>
