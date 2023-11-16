@@ -88,49 +88,49 @@ body {
   color: #626262;
 }
 
-.first-section {
+.pre-test-first-section {
   height: 100vh;
   overflow: hidden;
 }
 
-.first-section a {
+.pre-test-first-section a {
   text-decoration: none;
   color: #fff;
 }
 
-.first-section h1 {
+.pre-test-first-section h1 {
   font-family: "acumin-pro" !important;
   font-weight: 600;
   color: #fff;
 }
 
-.first-section h3 {
+.pre-test-first-section h3 {
   /* font-family: "acumin-pro" !important; */
   font-weight: 300;
   color: #fff;
 }
 
-.first-section .slick-slide:focus,
-.first-section .slick-slide div {
+.pre-test-first-section .slick-slide:focus,
+.pre-test-first-section .slick-slide div {
   outline: none;
 }
 
-.first-section .slick-active .title,
-.first-section .slick-active .detail {
+.pre-test-first-section .slick-active .title,
+.pre-test-first-section .slick-active .detail {
   animation: fadein 3s;
   transform: translate(0, 10vh);
   transition: all 2s;
 }
 
-.first-section .slick-dots {
+.pre-test-first-section .slick-dots {
   bottom: 25px !important;
 }
 
-.first-section .slick-dots li button:before {
+.pre-test-first-section .slick-dots li button:before {
   color: #b0b0b0 !important;
 }
 
-.first-section .slick-dots li.slick-active button:before {
+.pre-test-first-section .slick-dots li.slick-active button:before {
   color: #fff !important;
 }
 

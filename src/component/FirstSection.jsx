@@ -37,14 +37,14 @@ function FirstSection() {
   });
 
   return (
-    <div className="first-section">
-      <SEOMetaTag
+    <div className="pre-test-first-section">
+      {/* <SEOMetaTag
         title="GTD golf"
         description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
         keywords="GTD, GTD GOLF, GTD KOREA, GTD 드라이버"
         imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
         url="https://gtdgolfkorea.web.app/"
-      />
+      /> */}
       <ThemeProvider theme={theme}>
         <Slider {...settings}>
           <Box position="relative" align="center" width="100vw" height="100vh">
