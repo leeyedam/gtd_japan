@@ -1,10 +1,18 @@
 export const driverData = [
   {
+    id: "blackIce460Alpha",
+    img: "images/fitting/blackIce460.Webp",
+    title: "BLACK ICE 460 α",
+    link: "blackIce460Alpha",
+    price: "1,400,000",
+    src: "images/gtdProduct/blackIce460",
+  },
+  {
     id: "blackIce460",
     img: "images/fitting/blackIce460.Webp",
     title: "BLACK ICE 460",
     link: "blackIce460",
-    price: "1,100,000",
+    price: "1,200,000",
     src: "images/gtdProduct/blackIce460",
   },
   {

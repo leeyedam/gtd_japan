@@ -42,8 +42,8 @@ function FittingProductPageLayout() {
         title="FITTING | GTD golf"
         description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
         keywords="GTD, GTD GOLF, GTD KOREA, GTD 드라이버, BLACK ICE 460"
-        imgsrc="https://gtdgolfkorea.web.app/images/slide/1.Webp"
-        url="https://gtdgolfkorea.web.app/fitting"
+        imgsrc="https://gtdgolf.co.kr/images/slide/1.Webp"
+        url="https://gtdgolf.co.kr/fitting"
       />
       <ThemeProvider theme={theme}>
         <Grid
@@ -80,7 +80,7 @@ function FittingProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/1.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/1.jpg`}
                 alt="gtd golf"
               />
               <Box
@@ -88,7 +88,7 @@ function FittingProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/2.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/2.jpg`}
                 alt="gtd golf"
               />
               <Box
@@ -96,7 +96,7 @@ function FittingProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/3.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/3.jpg`}
                 alt="gtd golf"
               />
               <Box
@@ -104,7 +104,7 @@ function FittingProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/4.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/4.jpg`}
                 alt="gtd golf"
               />
               <Box
@@ -112,7 +112,7 @@ function FittingProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/5.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/5.jpg`}
                 alt="gtd golf"
               />
             </Slider>
@@ -149,7 +149,7 @@ function FittingProductPageLayout() {
                 },
                 objectFit: "cover",
               }}
-              src={`https://gtdgolfkorea.web.app/images/gtdProduct/${product.id}/6.jpg`}
+              src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/6.jpg`}
               alt="gtd golf"
             />
           </Grid>

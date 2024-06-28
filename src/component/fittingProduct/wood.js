@@ -4,7 +4,7 @@ export const woodData = [
     img: "images/fitting/BLACKICE-FW(3).Webp",
     title: "BLACK ICE - FW(#3)",
     link: "blackIceFW3",
-    price: "500,000",
+    price: "600,000",
     src: "images/gtdProduct/blackIceFW3",
   },
   {
@@ -12,7 +12,7 @@ export const woodData = [
     img: "images/fitting/BLACKICE-FW(5).Webp",
     title: "BLACK ICE - FW(#5)",
     link: "blackIceFW5",
-    price: "500,000",
+    price: "600,000",
     src: "images/gtdProduct/blackIceFW5",
   },
   {
@@ -20,7 +20,7 @@ export const woodData = [
     img: "images/fitting/BLACKICE-UT(19).Webp",
     title: "BLACK ICE - UT(19°)",
     link: "blackIceUT19",
-    price: "450,000",
+    price: "500,000",
     src: "images/gtdProduct/blackIceUT19",
   },
   {
@@ -28,7 +28,7 @@ export const woodData = [
     img: "images/fitting/BLACKICE-UT(21).Webp",
     title: "BLACK ICE - UT(21°)",
     link: "blackIceUT21",
-    price: "450,000",
+    price: "500,000",
     src: "images/gtdProduct/blackIceUT21",
   },
   {
@@ -36,7 +36,7 @@ export const woodData = [
     img: "images/fitting/BLACKICE-UT(24).Webp",
     title: "BLACK ICE - UT(24°)",
     link: "blackIceUT24",
-    price: "450,000",
+    price: "500,000",
     src: "images/gtdProduct/blackIceUT24",
   },
 ];

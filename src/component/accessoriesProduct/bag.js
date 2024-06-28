@@ -4,7 +4,7 @@ export const bagData = [
     img: "images/accessories/STAND-BAG(Black).Webp",
     title: "STAND BAG (BLACK)",
     link: "STAND-BAG(BLACK)",
-    price: "559,000",
+    price: "579,000",
     src: "images/gtdProduct/STANDBAG(BLACK)",
   },
   {
@@ -12,7 +12,7 @@ export const bagData = [
     img: "images/accessories/STAND-BAG(White).Webp",
     title: "STAND BAG (WHITE)",
     link: "STAND-BAG(WHITE)",
-    price: "559,000",
+    price: "579,000",
     src: "images/gtdProduct/STANDBAG(WHITE)",
   },
   {
@@ -20,7 +20,7 @@ export const bagData = [
     img: "images/accessories/BOSTON-BAG(Black).Webp",
     title: "BOSTON BAG (BLACK)",
     link: "BOSTON-BAG(Black)",
-    price: "259,000",
+    price: "339,000",
     src: "images/gtdProduct/BOSTON-BAG(Black)",
   },
   {
@@ -28,7 +28,7 @@ export const bagData = [
     img: "images/accessories/BOSTON-BAG(White).Webp",
     title: "BOSTON BAG (WHITE)",
     link: "BOSTON-BAG(White)",
-    price: "259,000",
+    price: "339,000",
     src: "images/gtdProduct/BOSTON-BAG(White)",
   },
 ];

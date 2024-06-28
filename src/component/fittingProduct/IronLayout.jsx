@@ -59,7 +59,7 @@ function IronLayout() {
                     },
                     objectFit: "cover",
                   }}
-                  src={`https://gtdgolfkorea.web.app/${data.img}`}
+                  src={`https://gtdgolf.co.kr/${data.img}`}
                   alt={data.id}
                 />
               </Link>

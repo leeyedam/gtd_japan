@@ -4,7 +4,7 @@ export const wedgeData = [
     img: "images/fitting/DoubleForged.Webp",
     title: "Double Forged",
     link: "doubleForged",
-    price: "380,000",
+    price: "350,000",
     src: "images/gtdProduct/doubleForged",
   },
 ];

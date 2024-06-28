@@ -37,7 +37,7 @@ function FirstSection() {
   });
 
   return (
-    <div className="pre-test-first-section">
+    <div className="pre-first-section">
       {/* <SEOMetaTag
         title="GTD golf"
         description="일본 천재 디자이너 조지 다케이가 만들어낸 클럽의 기능을 극대화한 풀티탄 소재의 폭발적 퍼포먼스"
@@ -62,7 +62,7 @@ function FirstSection() {
                 width: { xs: "0px", sm: "0px", md: "100vw" },
                 objectFit: "cover",
               }}
-              src="https://gtdgolfkorea.web.app/images/slide/1.Webp"
+              src="https://gtdgolf.co.kr/images/slide/1.Webp"
               alt="FITTING LINE"
               fetchpriority="high"
             />
@@ -74,7 +74,7 @@ function FirstSection() {
                 objectFit: "cover",
                 objectPosition: "41% 50%",
               }}
-              src="https://gtdgolfkorea.web.app/images/slide/1_sm.Webp"
+              src="https://gtdgolf.co.kr/images/slide/1_sm.Webp"
               alt="FITTING LINE"
               fetchpriority="high"
             />
@@ -96,7 +96,7 @@ function FirstSection() {
             <Box
               component="img"
               sx={slideImageStyle}
-              src="https://gtdgolfkorea.web.app/images/slide/10.Webp"
+              src="https://gtdgolf.co.kr/images/slide/10.Webp"
               alt="ACCESSORIES LINE"
               fetchpriority="high"
             />
@@ -118,7 +118,7 @@ function FirstSection() {
             <Box
               component="img"
               sx={slideImageStyle}
-              src="https://gtdgolfkorea.web.app/images/slide/3.Webp"
+              src="https://gtdgolf.co.kr/images/slide/3.Webp"
               alt="GUARANTEE"
               fetchpriority="high"
             />

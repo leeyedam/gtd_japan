@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 Disallow:
-Sitemap: https://gtdgolfkorea.web.app/sitemap.xml
+Sitemap: https://gtdgolf.co.kr/sitemap.xml
