@@ -79,7 +79,7 @@ function AccessoriesProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/1.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/1.Webp`}
                 alt="gtd golf"
               />
               <Box
@@ -87,7 +87,7 @@ function AccessoriesProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/2.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/2.Webp`}
                 alt="gtd golf"
               />
               <Box
@@ -95,7 +95,7 @@ function AccessoriesProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/3.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/3.Webp`}
                 alt="gtd golf"
               />
               <Box
@@ -103,7 +103,7 @@ function AccessoriesProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/4.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/4.Webp`}
                 alt="gtd golf"
               />
               <Box
@@ -111,7 +111,7 @@ function AccessoriesProductPageLayout() {
                 sx={{
                   objectFit: "cover",
                 }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/5.jpg`}
+                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/5.Webp`}
                 alt="gtd golf"
               />
             </Slider>
@@ -148,7 +148,7 @@ function AccessoriesProductPageLayout() {
                 },
                 objectFit: "cover",
               }}
-              src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/6.jpg`}
+              src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/6.Webp`}
               alt="gtd golf"
             />
           </Grid>

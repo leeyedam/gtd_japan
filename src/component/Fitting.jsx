@@ -7,6 +7,7 @@ import DriverLayout from "./fittingProduct/DriverLayout";
 import WoodLayout from "./fittingProduct/WoodLayout";
 import IronLayout from "./fittingProduct/IronLayout";
 import WedgeLayout from "./fittingProduct/WedgeLayout";
+import UtilityLayout from "./fittingProduct/UtilityLayout";
 import SEOMetaTag from "../SEOMetaTag";
 
 function TabPanel(props) {
@@ -116,8 +117,9 @@ function Fitting() {
           >
             <Tab label="DRIVER" {...a11yProps(0)} />
             <Tab label="WOOD" {...a11yProps(1)} />
-            <Tab label="IRON" {...a11yProps(2)} />
-            <Tab label="WEDGE" {...a11yProps(3)} />
+            <Tab label="UTILITY" {...a11yProps(2)} />
+            <Tab label="IRON" {...a11yProps(3)} />
+            <Tab label="WEDGE" {...a11yProps(4)} />
           </Tabs>
           <TabPanel value={value} index={0}>
             <DriverLayout />
@@ -126,9 +128,12 @@ function Fitting() {
             <WoodLayout />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <IronLayout />
+            <UtilityLayout />
           </TabPanel>
           <TabPanel value={value} index={3}>
+            <IronLayout />
+          </TabPanel>
+          <TabPanel value={value} index={4}>
             <WedgeLayout />
           </TabPanel>
         </Box>

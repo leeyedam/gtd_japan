@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM, { createRoot, hydrateRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -10,12 +10,11 @@ import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 import { legacy_createStore } from "redux";
 import rootReducer from "./store";
-import { hydrate } from "react-dom";
-import { render } from "react-dom";
 
-const root = document.getElementById("root");
-if (root.hasChildNodes()) {
-  hydrate(
+const rootElement = document.getElementById("root");
+const root = ReactDOM.createRoot(document.getElementById("root"));
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(
     <React.StrictMode>
       <Provider store={legacy_createStore(rootReducer)}>
         <HelmetProvider>
@@ -29,7 +28,7 @@ if (root.hasChildNodes()) {
     root
   );
 } else {
-  render(
+  root.render(
     <React.StrictMode>
       <Provider store={legacy_createStore(rootReducer)}>
         <HelmetProvider>
@@ -39,8 +38,7 @@ if (root.hasChildNodes()) {
           </BrowserRouter>
         </HelmetProvider>
       </Provider>
-    </React.StrictMode>,
-    root
+    </React.StrictMode>
   );
 }
 

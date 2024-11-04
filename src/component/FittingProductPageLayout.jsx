@@ -74,48 +74,79 @@ function FittingProductPageLayout() {
               marginTop: { lg: "32px", xl: "0px" },
             }}
           >
-            <Slider {...settings}>
-              <Box
-                component="img"
-                sx={{
-                  objectFit: "cover",
-                }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/1.jpg`}
-                alt="gtd golf"
-              />
-              <Box
-                component="img"
-                sx={{
-                  objectFit: "cover",
-                }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/2.jpg`}
-                alt="gtd golf"
-              />
-              <Box
-                component="img"
-                sx={{
-                  objectFit: "cover",
-                }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/3.jpg`}
-                alt="gtd golf"
-              />
-              <Box
-                component="img"
-                sx={{
-                  objectFit: "cover",
-                }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/4.jpg`}
-                alt="gtd golf"
-              />
-              <Box
-                component="img"
-                sx={{
-                  objectFit: "cover",
-                }}
-                src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/5.jpg`}
-                alt="gtd golf"
-              />
-            </Slider>
+            <>
+              {product.id.includes("DIAMOND") && product.id.includes("UT") ? (
+                <Slider {...settings}>
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/1.Webp`}
+                    alt="gtd golf"
+                  />
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/2.Webp`}
+                    alt="gtd golf"
+                  />
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/3.Webp`}
+                    alt="gtd golf"
+                  />
+                </Slider>
+              ) : (
+                <Slider {...settings}>
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/1.Webp`}
+                    alt="gtd golf"
+                  />
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/2.Webp`}
+                    alt="gtd golf"
+                  />
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/3.Webp`}
+                    alt="gtd golf"
+                  />
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/4.Webp`}
+                    alt="gtd golf"
+                  />
+                  <Box
+                    component="img"
+                    sx={{
+                      objectFit: "cover",
+                    }}
+                    src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/5.Webp`}
+                    alt="gtd golf"
+                  />
+                </Slider>
+              )}
+            </>
           </Grid>
           <Grid
             item
@@ -149,7 +180,7 @@ function FittingProductPageLayout() {
                 },
                 objectFit: "cover",
               }}
-              src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/6.jpg`}
+              src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/6.Webp`}
               alt="gtd golf"
             />
           </Grid>
