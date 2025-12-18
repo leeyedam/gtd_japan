@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 function SecondSection() {
   const titleTextStyle = {
-    display: { xs: "none", sm: "flex", md: "flex" },
+    display: { xs: "none", sm: "flex", lg: "flex" },
     position: "absolute",
-    fontSize: { xs: "26px", sm: "38px", md: "76px" },
-    lineHeight: { xs: "40px", sm: "55px", md: "95px" },
-    marginTop: { xs: "30px" },
-    marginBottom: { xs: "10px", sm: "25px", md: "25px" },
+    fontSize: { xs: "26px", sm: "38px", md: "48px", lg: "76px" },
+    lineHeight: { xs: "40px", sm: "55px", lg: "95px" },
+    marginTop: { xs: "30px", md: "80px" },
+    marginBottom: { xs: "10px", sm: "25px", md: "35px", lg: "25px" },
   };
   const titleFontStyle = {
     fontFamily: "Giants-Inline",
@@ -22,8 +22,8 @@ function SecondSection() {
         align="center"
         width="100vw"
         sx={{
-          maxHeight: { xs: "100%", sm: "100%", md: "100%" },
-          maxWidth: { xs: "100vw", sm: "720px", md: "1600px" },
+          maxHeight: { xs: "100%", sm: "100%", lg: "100%" },
+          maxWidth: { xs: "100vw", sm: "720px", md: "820px", lg: "1600px" },
           backgroundColor: { xs: "#111" },
         }}
       >
@@ -32,20 +32,20 @@ function SecondSection() {
           sx={{
             position: "relative",
             display: "flex",
-            justifyContent: { xs: "center", sm: "center", md: "space-between" },
+            justifyContent: { xs: "center", sm: "center", lg: "space-between" },
             alignItems: "center",
-            marginTop: { xs: "100px", sm: "130px", md: "130px" },
-            marginBottom: { xs: "10px", sm: "80px", md: "140px" },
+            marginTop: { xs: "100px", sm: "130px", md: "160px", lg: "130px" },
+            marginBottom: { xs: "10px", sm: "80px", md: "100px", lg: "140px" },
           }}
         >
-          <Grid item xs={12} sm={12} md={5}>
+          <Grid item xs={12} sm={12} lg={5}>
             <Typography
               data-aos="fade-right"
               data-aos-delay="200"
               sx={{
                 ...titleTextStyle,
-                top: { md: "15%" },
-                left: { md: "28%" },
+                top: { lg: "15%" },
+                left: { lg: "28%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -59,8 +59,8 @@ function SecondSection() {
               data-aos-delay="200"
               sx={{
                 ...titleTextStyle,
-                top: { sm: "6%", md: "27%" },
-                left: { md: "28%" },
+                top: { sm: "6%", lg: "27%" },
+                left: { lg: "28%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -74,8 +74,8 @@ function SecondSection() {
               data-aos-delay="200"
               sx={{
                 ...titleTextStyle,
-                top: { sm: "6%", md: "27%" },
-                left: { sm: "12%", md: "39%" },
+                top: { sm: "6%", lg: "27%" },
+                left: { sm: "12%", lg: "39%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -100,8 +100,13 @@ function SecondSection() {
             />
             <Card
               sx={{
-                maxHeight: { xs: "400px", sm: "700px", md: "1000px" },
-                maxWidth: { xs: "320px", sm: "600px", md: "100%" },
+                maxHeight: {
+                  xs: "400px",
+                  sm: "700px",
+                  md: "800px",
+                  lg: "1000px",
+                },
+                maxWidth: { xs: "320px", sm: "600px", md: "700px", lg: "100%" },
                 marginTop: { md: "30px" },
               }}
               style={{ boxShadow: "none", backgroundColor: "transparent" }}
@@ -109,8 +114,8 @@ function SecondSection() {
               <Box
                 component="img"
                 sx={{
-                  maxHeight: { xs: "100%", sm: "100%", md: "800px" },
-                  maxWidth: { xs: "100%", sm: "100%", md: "100%" },
+                  maxHeight: { xs: "100%", sm: "100%", lg: "800px" },
+                  maxWidth: { xs: "100%", sm: "100%", lg: "100%" },
                 }}
                 src="images/slide/12.Webp"
                 alt="gtd"
@@ -123,19 +128,19 @@ function SecondSection() {
             sm={12}
             md={7}
             sx={{
-              marginTop: { xs: "40px", sm: "80px", md: "400px" },
-              paddingLeft: { md: "10px" },
+              marginTop: { xs: "40px", sm: "80px", lg: "400px" },
+              paddingLeft: { lg: "10px" },
               textAlign: "left",
             }}
           >
             <Typography
               sx={{
-                display: { xs: "none", sm: "none", md: "flex" },
-                maxWidth: { md: "720px" },
-                fontSize: { md: "18px" },
-                lineHeight: { md: "35px" },
-                marginBottom: { md: "20px" },
-                fontWeight: { md: 500 },
+                display: { xs: "none", sm: "none", lg: "flex" },
+                maxWidth: { lg: "720px" },
+                fontSize: { lg: "18px" },
+                lineHeight: { lg: "35px" },
+                marginBottom: { lg: "20px" },
+                fontWeight: { lg: 500 },
               }}
               style={{
                 fontFamily: "NanumSquareNeo-Variable",
@@ -154,7 +159,7 @@ function SecondSection() {
             </Typography>
             <Typography
               sx={{
-                display: { xs: "flex", sm: "flex", md: "none" },
+                display: { xs: "flex", sm: "flex", lg: "none" },
                 maxWidth: { xs: "320px", sm: "100vw" },
                 fontSize: { xs: "18px", sm: "25px" },
                 lineHeight: { xs: "40px", sm: "45px" },
@@ -175,7 +180,7 @@ function SecondSection() {
               data-aos="fade-left"
               data-aos-delay="300"
               sx={{
-                display: { xs: "flex", sm: "flex", md: "none" },
+                display: { xs: "flex", sm: "flex", lg: "none" },
                 maxWidth: { xs: "320px", sm: "100vw" },
                 fontSize: { xs: "18px", sm: "32px" },
                 lineHeight: { xs: "40px", sm: "55px" },
@@ -192,7 +197,7 @@ function SecondSection() {
             </Typography>
             <Typography
               sx={{
-                display: { xs: "flex", sm: "flex", md: "none" },
+                display: { xs: "flex", sm: "flex", lg: "none" },
                 maxWidth: { xs: "320px", sm: "100vw" },
                 fontSize: { xs: "18px", sm: "25px" },
                 lineHeight: { xs: "40px", sm: "45px" },
@@ -210,9 +215,9 @@ function SecondSection() {
             </Typography>
             <Typography
               sx={{
-                display: { xs: "none", md: "flex" },
-                fontSize: { xs: "12px", sm: "16px", md: "18px" },
-                fontWeight: { sm: 700, md: 500 },
+                display: { xs: "none", lg: "flex" },
+                fontSize: { xs: "12px", sm: "16px", lg: "18px" },
+                fontWeight: { sm: 700, lg: 500 },
               }}
               style={{
                 fontFamily: "NanumSquareNeo-Variable",

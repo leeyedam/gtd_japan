@@ -13,8 +13,8 @@ function FourthSection() {
   const titleTextStyle = {
     display: { xs: "none", sm: "flex", md: "flex" },
     position: "absolute",
-    fontSize: { xs: "26px", sm: "38px", md: "76px" },
-    lineHeight: { xs: "40px", sm: "55px", md: "95px" },
+    fontSize: { xs: "26px", sm: "38px", md: "48px", lg: "76px" },
+    lineHeight: { xs: "40px", sm: "55px", lg: "95px" },
     marginTop: { xs: "30px" },
     marginBottom: { xs: "10px", sm: "25px", md: "25px" },
   };
@@ -46,14 +46,14 @@ function FourthSection() {
             marginBottom: { xs: "10px", sm: "80px", md: "70px" },
           }}
         >
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={12} lg={6}>
             <Typography
               data-aos="fade-right"
               data-aos-delay="200"
               sx={{
                 ...titleTextStyle,
-                top: { sm: "2%", md: "15%" },
-                left: { sm: "5%", md: "38%", xl: "33%" },
+                top: { sm: "2%", md: "5%", lg: "15%" },
+                left: { sm: "5%", lg: "38%", xl: "33%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -67,8 +67,8 @@ function FourthSection() {
               data-aos-delay="200"
               sx={{
                 ...titleTextStyle,
-                top: { sm: "7%", md: "27%" },
-                left: { sm: "5%", md: "38%", xl: "33%" },
+                top: { sm: "7%", md: "10%", lg: "27%" },
+                left: { sm: "5%", lg: "38%", xl: "33%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -82,8 +82,8 @@ function FourthSection() {
               data-aos-delay="200"
               sx={{
                 ...titleTextStyle,
-                top: { sm: "7%", md: "27%" },
-                left: { sm: "17%", md: "45%" },
+                top: { sm: "7%", md: "10%", lg: "27%" },
+                left: { sm: "17%", lg: "45%" },
               }}
               style={{
                 ...titleFontStyle,
@@ -108,8 +108,13 @@ function FourthSection() {
             />
             <Card
               sx={{
-                maxHeight: { xs: "400px", sm: "700px", md: "1000px" },
-                maxWidth: { xs: "320px", sm: "600px", md: "100%" },
+                maxHeight: {
+                  xs: "400px",
+                  sm: "700px",
+                  md: "900px",
+                  lg: "1000px",
+                },
+                maxWidth: { xs: "320px", sm: "600px", md: "700px", lg: "100%" },
                 marginTop: { md: "30px" },
               }}
               style={{ boxShadow: "none", backgroundColor: "transparent" }}
@@ -117,8 +122,8 @@ function FourthSection() {
               <Box
                 component="img"
                 sx={{
-                  maxHeight: { xs: "100%", sm: "100%", md: "830px" },
-                  maxWidth: { xs: "100%", sm: "100%", md: "100%" },
+                  maxHeight: { xs: "100%", sm: "100%", lg: "830px" },
+                  maxWidth: { xs: "100%", sm: "100%", lg: "100%" },
                 }}
                 src="images/slide/17.Webp"
                 alt="USER REVIEWS OF THE GTD GOLF"
@@ -129,17 +134,17 @@ function FourthSection() {
             item
             xs={12}
             sm={12}
-            md={6}
+            lg={6}
             sx={{
-              marginTop: { xs: "40px", sm: "80px", md: "400px" },
-              paddingLeft: { md: "50px" },
+              marginTop: { xs: "40px", sm: "80px", lg: "400px" },
+              paddingLeft: { lg: "50px" },
               justifyContent: "center",
             }}
           >
             <ImageList
               sx={{
-                width: { xs: 320, sm: 600, md: 550 },
-                height: { xs: 320, sm: 480, md: 455 },
+                width: { xs: 320, sm: 600, md: 700, lg: 550 },
+                height: { xs: 320, sm: 480, lg: 455 },
               }}
             >
               {itemData.map((item, idx) => (

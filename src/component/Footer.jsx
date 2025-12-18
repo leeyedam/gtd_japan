@@ -41,8 +41,9 @@ function Footer() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1800,
-        xl: 2300,
+        lg: 1200,
+        xl: 1800,
+        xxl: 2300,
       },
     },
   });
@@ -52,9 +53,9 @@ function Footer() {
         <Box
           width="100vw"
           sx={{
-            height: { xs: "270px", sm: "330px", md: "330px" },
-            maxWidth: { xs: "100vw", sm: "100vw", md: "100vw" },
-            overflow: { sm: "hidden", md: "visible" },
+            height: { xs: "270px", sm: "330px", lg: "330px" },
+            maxWidth: { xs: "100vw", sm: "100vw", lg: "100vw" },
+            overflow: { sm: "hidden", lg: "visible" },
           }}
         >
           <Grid
@@ -62,14 +63,19 @@ function Footer() {
             sx={{
               display: "flex",
               justifyContent: { xs: "center", sm: "center", md: "center" },
-              marginTop: { xs: "30px", sm: "30px", md: "130px" },
+              marginTop: { xs: "30px", sm: "30px", lg: "130px" },
             }}
           >
             <Divider
               sx={{
                 display: { xs: "flex", sm: "flex", md: "flex" },
-                width: { xs: "100vw", sm: "100vw", md: "1800px", xl: "2400px" },
-                marginBottom: { xs: "40px", sm: "60px", md: "60px" },
+                width: {
+                  xs: "100vw",
+                  sm: "100vw",
+                  lg: "1800px",
+                  xxl: "2400px",
+                },
+                marginBottom: { xs: "40px", sm: "60px", lg: "60px" },
                 border: ".2px solid #2e2e2e",
               }}
             />
@@ -82,9 +88,9 @@ function Footer() {
               sx={{
                 paddingLeft: {
                   sm: "50px",
-                  md: "200px",
-                  lg: "480px",
-                  xl: "600px",
+                  lg: "200px",
+                  xl: "480px",
+                  xxl: "600px",
                 },
                 textAlign: "left",
               }}
@@ -101,8 +107,8 @@ function Footer() {
               <Typography
                 sx={{
                   ...infoTextStyle,
-                  marginTop: { xs: "10px", sm: "10px", md: "15px" },
-                  marginBottom: { xs: "flex", sm: "flex", md: "20px" },
+                  marginTop: { xs: "10px", sm: "10px", lg: "15px" },
+                  marginBottom: { xs: "flex", sm: "flex", lg: "20px" },
                 }}
                 style={{
                   fontWeight: 700,
@@ -149,7 +155,7 @@ function Footer() {
               <Typography
                 sx={{
                   ...infoTextStyle,
-                  marginTop: { xs: "flex", sm: "flex", md: "20px" },
+                  marginTop: { xs: "flex", sm: "flex", lg: "20px" },
                 }}
                 style={defaultTextStyle}
               >

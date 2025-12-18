@@ -1,5 +1,13 @@
 export const driverData = [
   {
+    id: "CONQUEROR",
+    img: "images/fitting/Conqueror.Webp",
+    title: "CONQUEROR",
+    link: "Conqueror",
+    price: "1,200,000",
+    src: "images/gtdProduct/Conqueror",
+  },
+  {
     id: "B.ICE-DIAMOND_PLATINUM",
     img: "images/fitting/B.ICE-DIAMOND_PLATINUM.Webp",
     title: "B.ICE-DIAMOND_PLATINUM",
@@ -8,12 +16,20 @@ export const driverData = [
     src: "images/gtdProduct/B.ICE-DIAMOND_PLATINUM",
   },
   {
-    id: "B.ICE-DIAMOND_BLACK",
-    img: "images/fitting/B.ICE-DIAMOND_BLACK.Webp",
-    title: "B.ICE-DIAMOND_BLACK",
-    link: "B.ICE-DIAMOND_BLACK",
+    id: "B.ICE-DIAMOND_BLACK(M)",
+    img: "images/fitting/B.ICE-DIAMOND_BLACK(M).Webp",
+    title: "B.ICE-DIAMOND_BLACK(M)",
+    link: "B.ICE-DIAMOND_BLACK(M)",
     price: "1,300,000",
-    src: "images/gtdProduct/B.ICE-DIAMOND_BLACK",
+    src: "images/gtdProduct/B.ICE-DIAMOND_BLACK(M)",
+  },
+  {
+    id: "B.ICE-DIAMOND_BLACK(W)",
+    img: "images/fitting/B.ICE-DIAMOND_BLACK(W).Webp",
+    title: "B.ICE-DIAMOND_BLACK(W)",
+    link: "B.ICE-DIAMOND_BLACK(W)",
+    price: "1,300,000",
+    src: "images/gtdProduct/B.ICE-DIAMOND_BLACK(W)",
   },
   {
     id: "B.ICE-DIAMOND_BLUE",

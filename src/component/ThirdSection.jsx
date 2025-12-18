@@ -16,8 +16,9 @@ function ThirdSection() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1800,
-        xl: 2300,
+        lg: 1200,
+        xl: 1800,
+        xxl: 2300,
       },
     },
   });
@@ -29,8 +30,8 @@ function ThirdSection() {
           width="100vw"
           sx={{
             position: "relative",
-            height: { xs: "550px", sm: "420px", md: "650px" },
-            maxWidth: { xs: "100vw", sm: "100vw", md: "100vw" },
+            height: { xs: "550px", sm: "420px", lg: "650px" },
+            maxWidth: { xs: "100vw", sm: "100vw", lg: "100vw" },
             overflow: { sm: "hidden", md: "visible" },
             backgroundColor: { xs: "#111", sm: "#2f2f2f", md: "#2f2f2f" },
           }}
@@ -42,25 +43,25 @@ function ThirdSection() {
               justifyContent: {
                 xs: "center",
                 sm: "center",
-                md: "space-between",
+                lg: "space-between",
                 xl: "center",
               },
               alignItems: "center",
-              marginTop: { xs: "30px", sm: "30px", md: "130px" },
+              marginTop: { xs: "30px", sm: "30px", lg: "130px" },
             }}
           >
             <Grid
               item
               xs={10}
               sm={12}
-              md={7}
-              lg={8}
+              lg={7}
+              xl={8}
               data-aos="fade-up"
               data-aos-delay="300"
               sx={{
                 paddingLeft: {
                   sm: "60px",
-                  md: "360px",
+                  // md: "360px",
                   lg: "400px",
                   xl: "150px",
                 },
@@ -76,11 +77,16 @@ function ThirdSection() {
               />
               <Typography
                 sx={{
-                  fontSize: { xs: "36px", sm: "44px", md: "84px", lg: "86px" },
-                  lineHeight: { xs: "42px", sm: "52px", md: "95px" },
-                  marginTop: { xs: "60px", sm: "80px", md: "150px" },
-                  marginBottom: { xs: "250px", sm: "25px", md: "25px" },
-                  textAlign: { xs: "center", sm: "left", md: "left" },
+                  fontSize: { xs: "36px", sm: "44px", lg: "84px", xl: "86px" },
+                  lineHeight: { xs: "42px", sm: "52px", lg: "95px" },
+                  marginTop: {
+                    xs: "60px",
+                    sm: "80px",
+                    md: "100px",
+                    lg: "150px",
+                  },
+                  marginBottom: { xs: "250px", sm: "25px", lg: "25px" },
+                  textAlign: { xs: "center", sm: "left", lg: "left" },
                   fontFamily: {
                     xs: "NanumBarunGothic",
                     sm: "NanumBarunGothic",
@@ -144,11 +150,17 @@ function ThirdSection() {
               <Card
                 sx={{
                   position: "absolute",
-                  top: { xs: "37%", sm: "5%", md: "-20%" },
-                  right: { xs: "20%", sm: "-10%", md: "8%", xl: "15%" },
-                  maxHeight: { xs: "220px", sm: "480px", md: "1000px" },
-                  maxWidth: { xs: "220px", sm: "480px", md: "100%" },
-                  marginTop: { md: "30px" },
+                  top: { xs: "37%", sm: "5%", md: "-5%", lg: "-20%" },
+                  right: {
+                    xs: "20%",
+                    sm: "-10%",
+                    md: "1%",
+                    lg: "8%",
+                    xl: "15%",
+                  },
+                  maxHeight: { xs: "220px", sm: "480px", lg: "1000px" },
+                  maxWidth: { xs: "220px", sm: "480px", lg: "100%" },
+                  marginTop: { lg: "30px" },
                 }}
                 style={{ boxShadow: "none", backgroundColor: "transparent" }}
               >
@@ -158,13 +170,13 @@ function ThirdSection() {
                     maxHeight: {
                       xs: "100%",
                       sm: "100%",
-                      md: "750px",
+                      // md: "750px",
                       lg: "800px",
                     },
                     maxWidth: {
                       xs: "100%",
                       sm: "100%",
-                      md: "750px",
+                      // md: "750px",
                       lg: "800px",
                     },
                     objectFit: "cover",

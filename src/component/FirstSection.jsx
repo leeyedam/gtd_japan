@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import FirstSectionText from "./FirstSectionText";
-import SEOMetaTag from "../SEOMetaTag";
 
 function FirstSection() {
   const settings = {
@@ -32,6 +31,7 @@ function FirstSection() {
         md: 900,
         lg: 1200,
         xl: 1800,
+        xxl: 2300,
       },
     },
   });
@@ -51,15 +51,15 @@ function FirstSection() {
             <FirstSectionText
               title="FITTING"
               link="/fitting"
-              top={{ xs: "65%", sm: "62%", md: "33%" }}
-              left={{ xs: "55%", sm: "56%", md: "76%", lg: "77%", xl: "80%" }}
-              width={{ md: "none" }}
+              top={{ xs: "65%", sm: "62%", md: "60%", lg: "33%" }}
+              left={{ xs: "55%", sm: "56%", md: "56%", lg: "56.5%" }}
+              width={{ xl: "40%" }}
             />
             <Box
               component="img"
               sx={{
-                height: { xs: "0px", sm: "0px", md: "100vh" },
-                width: { xs: "0px", sm: "0px", md: "100vw" },
+                height: { xs: "0px", sm: "0px", md: "0px", xl: "100vh" },
+                width: { xs: "0px", sm: "0px", md: "0px", xl: "100vw" },
                 objectFit: "cover",
               }}
               src="https://gtdgolf.co.kr/images/slide/1.Webp"
@@ -69,8 +69,8 @@ function FirstSection() {
             <Box
               component="img"
               sx={{
-                height: { xs: "100vh", sm: "100vh", md: "0px" },
-                width: { xs: "100vw", sm: "100vw", md: "0px" },
+                height: { xs: "100vh", sm: "100vh", md: "100vh" },
+                width: { xs: "100vw", sm: "100vw", md: "100vw" },
                 objectFit: "cover",
                 objectPosition: "41% 50%",
               }}
@@ -89,9 +89,9 @@ function FirstSection() {
             <FirstSectionText
               title="ACCESSORIES"
               link="/accessories"
-              top={{ xs: "65%", sm: "62%", md: "33%" }}
-              left={{ xs: "25%", sm: "28%", md: "56%", lg: "56.5%" }}
-              width={{ md: "40%" }}
+              top={{ xs: "65%", sm: "62%", md: "60%", lg: "33%" }}
+              left={{ xs: "25%", sm: "28%", md: "29%", lg: "56.5%" }}
+              width={{ xl: "40%" }}
             />
             <Box
               component="img"
@@ -111,9 +111,9 @@ function FirstSection() {
             <FirstSectionText
               title="GUARANTEE"
               link="guarantee"
-              top={{ xs: "66%", sm: "62%", md: "33%" }}
-              left={{ xs: "33%", sm: "35%", md: "56%" }}
-              width={{ md: "40%" }}
+              top={{ xs: "66%", sm: "62%", md: "60%", lg: "33%" }}
+              left={{ xs: "33%", sm: "35%", md: "37%", lg: "56.5%" }}
+              width={{ xl: "40%" }}
             />
             <Box
               component="img"

@@ -30,8 +30,9 @@ function FittingProductPageLayout() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1800,
-        xl: 2300,
+        lg: 1200,
+        xl: 1800,
+        xxl: 2300,
       },
     },
   });
@@ -48,16 +49,16 @@ function FittingProductPageLayout() {
       <ThemeProvider theme={theme}>
         <Grid
           container
-          columns={{ xs: 4, sm: 12, md: 12, lg: 12, xl: 12 }}
+          columns={{ xs: 4, sm: 12, md: 4, lg: 12, xxl: 12 }}
           sx={{
             paddingTop: {
               md: "180px",
               lg: "160px",
             },
             height: {
-              md: "75vh",
+              // md: "75vh",
               lg: "85vh",
-              xl: "80vh",
+              xxl: "80vh",
             },
           }}
           justifyContent={"center"}
@@ -70,8 +71,9 @@ function FittingProductPageLayout() {
             md={4}
             lg={3}
             xl={3}
+            xxl={3}
             sx={{
-              marginTop: { lg: "32px", xl: "0px" },
+              marginTop: { lg: "15px", xl: "32px", xxl: "0px" },
             }}
           >
             <>
@@ -153,13 +155,15 @@ function FittingProductPageLayout() {
             xs={4}
             sm={12}
             md={4}
-            lg={4}
-            xl={3.5}
+            lg={4.5}
+            xl={4}
+            xxl={3.5}
             sx={{
               maxHeight: {
-                md: "400px",
-                lg: "620px",
-                xl: "650px",
+                // md: "350px",
+                lg: "380px",
+                xl: "620px",
+                xxl: "650px",
               },
               overflowY: "scroll",
               overflowX: "hidden",
@@ -171,17 +175,20 @@ function FittingProductPageLayout() {
                 maxWidth: {
                   xs: "100%",
                   sm: "100%",
-                  md: "380px",
-                  lg: "700px",
+                  // md: "380px",
+                  lg: "400px",
+                  xl: "680px",
+                  xxl: "700px",
                 },
                 marginLeft: {
                   lg: "55px",
-                  xl: "30px",
+                  // xl: "10px",
+                  xxl: "30px",
                 },
                 objectFit: "cover",
               }}
               src={`https://gtdgolf.co.kr/images/gtdProduct/${product.id}/6.Webp`}
-              alt="gtd golf"
+              alt="gtd golf6"
             />
           </Grid>
         </Grid>

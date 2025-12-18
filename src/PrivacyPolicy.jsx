@@ -11,7 +11,8 @@ function PrivacyPolicy() {
         sm: 600,
         md: 900,
         lg: 1200,
-        xl: 2600,
+        xl: 1800,
+        xxl: 2600,
       },
     },
   });
@@ -28,9 +29,9 @@ function PrivacyPolicy() {
         <Box
           sx={{
             height: { xs: "auto", sm: "auto", md: "auto" },
-            width: { xs: "280px", sm: "500px", md: "1200px" },
-            marginTop: { xs: "80px", sm: "80px", md: "150px" },
-            overflow: { sm: "hidden", md: "visible" },
+            width: { xs: "280px", sm: "500px", md: "700px", lg: "1200px" },
+            marginTop: { xs: "80px", sm: "80px", md: "120px", lg: "150px" },
+            overflow: { sm: "hidden", lg: "visible" },
             padding: { xs: "20px", sm: "60px", md: "60px" },
             border: ".1px solid #e4e4e4",
             color: "#e4e4e4",
@@ -40,8 +41,8 @@ function PrivacyPolicy() {
             textAlign={"left"}
             fontWeight={500}
             sx={{
-              fontSize: { xs: "22px", md: "30px" },
-              marginBottom: { xs: "20px", sm: "40px", md: "40px" },
+              fontSize: { xs: "22px", lg: "30px" },
+              marginBottom: { xs: "20px", sm: "40px", lg: "40px" },
             }}
           >
             개인정보처리방침
@@ -52,7 +53,8 @@ function PrivacyPolicy() {
               width: {
                 xs: "280px",
                 sm: "500px",
-                md: "1200px",
+                md: "700px",
+                lg: "1200px",
               },
               marginBottom: { xs: "40px", sm: "60px", md: "60px" },
               border: ".5px solid #e4e4e4",

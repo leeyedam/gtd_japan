@@ -4,10 +4,10 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 function Change() {
   const imgStyle = {
-    width: { xs: "320px", sm: "600px", md: "680px", xl: "920px" },
-    height: { xs: "213px", sm: "400px", md: "800px" },
-    top: { xs: "2%", sm: "5%", md: "15%" },
-    right: { xs: "0%", sm: "0%", md: "0%" },
+    width: { xs: "320px", sm: "600px", md: "750px", lg: "680px" },
+    height: { xs: "213px", sm: "400px", md: "500px", lg: "800px" },
+    top: { xs: "2%", sm: "5%", lg: "15%" },
+    right: { xs: "0%", sm: "0%", lg: "0%" },
     borderRadius: "20px",
   };
   const fontStyle = {
@@ -22,7 +22,8 @@ function Change() {
         sm: 600,
         md: 900,
         lg: 1200,
-        xl: 2600,
+        xl: 1800,
+        xxl: 2300,
       },
     },
   });
@@ -38,8 +39,10 @@ function Change() {
           maxWidth: {
             xs: "320px",
             sm: "600px",
-            md: "1400px",
-            xl: "2000px",
+            md: "750px",
+            lg: "1400px",
+            xl: "1400px",
+            xxl: "1400px",
           },
         }}
       >
@@ -51,13 +54,13 @@ function Change() {
             position="absolute"
             zIndex={7}
             sx={{
-              fontSize: { xs: "28px", sm: "34px", md: "82px", lg: "82px" },
-              lineHeight: { xs: "36px", sm: "46px", md: "95px" },
-              marginTop: { xs: "60px", sm: "80px", md: "150px" },
-              marginBottom: { xs: "250px", sm: "25px", md: "25px" },
-              textAlign: { xs: "center", sm: "left", md: "left" },
-              top: { xs: "5%", sm: "15%", md: "25%" },
-              left: { xs: "27%", sm: "10%", md: "0%" },
+              fontSize: { xs: "28px", sm: "34px", md: "40px", lg: "82px" },
+              lineHeight: { xs: "36px", sm: "46px", lg: "95px" },
+              marginTop: { xs: "60px", sm: "80px", lg: "150px" },
+              marginBottom: { xs: "250px", sm: "25px", lg: "25px" },
+              textAlign: { xs: "center", sm: "left", lg: "left" },
+              top: { xs: "5%", sm: "15%", md: "25%", lg: "25%" },
+              left: { xs: "27%", sm: "10%", lg: "0%" },
             }}
             style={{
               ...fontStyle,
@@ -75,13 +78,13 @@ function Change() {
             zIndex={7}
             sx={{
               display: { xs: "none", sm: "flex", md: "flex" },
-              maxWidth: { xs: "320px", sm: "480px", md: "660px", xl: "750px" },
-              fontSize: { xs: "14px", md: "18px" },
-              lineHeight: { md: "35px" },
+              maxWidth: { xs: "320px", sm: "480px", md: "550px", lg: "660px" },
+              fontSize: { xs: "14px", md: "16px", lg: "18px" },
+              lineHeight: { lg: "35px" },
               marginBottom: { md: "20px" },
               fontWeight: { md: 500 },
-              top: { sm: "65%", md: "68%" },
-              left: { sm: "10%", md: "0%" },
+              top: { sm: "65%", md: "73%", lg: "68%" },
+              left: { sm: "10%", lg: "0%" },
             }}
             style={{
               ...fontStyle,
@@ -127,11 +130,11 @@ function Change() {
               maxWidth: {
                 xs: "320px",
                 sm: "600px",
-                md: "1400px",
+                lg: "1400px",
                 xl: "2000px",
               },
-              height: { xs: "380px", sm: "400px", md: "800px" },
-              marginTop: { xs: "5px", sm: "40px", md: "220px" },
+              height: { xs: "380px", sm: "400px", lg: "800px" },
+              marginTop: { xs: "5px", sm: "40px", lg: "220px" },
             }}
             style={{
               boxShadow: "none",
@@ -140,8 +143,13 @@ function Change() {
           >
             <Box
               sx={{
-                width: { xs: "320px", sm: "600px", md: "1400px", xl: "2400px" },
-                height: { xs: "400px", sm: "400px", md: "800px" },
+                width: {
+                  xs: "320px",
+                  sm: "600px",
+                  lg: "1400px",
+                  xxl: "2400px",
+                },
+                height: { xs: "400px", sm: "400px", md: "510px", lg: "800px" },
               }}
             />
             <Box

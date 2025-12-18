@@ -42,6 +42,7 @@ function Guarantee() {
         md: 900,
         lg: 1200,
         xl: 1800,
+        xxl: 2300,
       },
     },
   });
@@ -183,7 +184,7 @@ function Guarantee() {
           justifyContent={"center"}
           alignContent={"center"}
         >
-          <Grid item xs={4} sm={7} md={4} lg={3} xl={3.5}>
+          <Grid item xs={4} sm={7} md={7} lg={3} xl={3.5}>
             <Box
               sx={{
                 padding: {

@@ -128,19 +128,19 @@ export const utilityData = [
     src: "images/gtdProduct/blackIceUT19",
   },
   {
-    id: "blackIceUT21",
-    img: "images/fitting/BLACKICE-UT(21).Webp",
-    title: "BLACK ICE - UT(21°)",
-    link: "blackIceUT21",
-    price: "500,000",
-    src: "images/gtdProduct/blackIceUT21",
-  },
-  {
     id: "blackIceUT24",
     img: "images/fitting/BLACKICE-UT(24).Webp",
     title: "BLACK ICE - UT(24°)",
     link: "blackIceUT24",
     price: "500,000",
     src: "images/gtdProduct/blackIceUT24",
+  },
+  {
+    id: "blackIceUT21",
+    img: "images/fitting/BLACKICE-UT(21).Webp",
+    title: "BLACK ICE - UT(21°) | SOLD OUT",
+    link: "blackIceUT21",
+    price: "500,000",
+    src: "images/gtdProduct/blackIceUT21",
   },
 ];

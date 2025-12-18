@@ -80,19 +80,19 @@ export const woodData = [
     src: "images/gtdProduct/B.ICE-DIAMOND_GREEN-UT5_W",
   },
   {
-    id: "blackIceFW3",
-    img: "images/fitting/BLACKICE-FW(3).Webp",
-    title: "BLACK ICE - FW(#3)",
-    link: "blackIceFW3",
-    price: "600,000",
-    src: "images/gtdProduct/blackIceFW3",
-  },
-  {
     id: "blackIceFW5",
     img: "images/fitting/BLACKICE-FW(5).Webp",
     title: "BLACK ICE - FW(#5)",
     link: "blackIceFW5",
     price: "600,000",
     src: "images/gtdProduct/blackIceFW5",
+  },
+  {
+    id: "blackIceFW3",
+    img: "images/fitting/BLACKICE-FW(3).Webp",
+    title: "BLACK ICE - FW(#3) | SOLD OUT",
+    link: "blackIceFW3",
+    price: "600,000",
+    src: "images/gtdProduct/blackIceFW3",
   },
 ];

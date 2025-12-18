@@ -8,6 +8,7 @@ import WoodLayout from "./fittingProduct/WoodLayout";
 import IronLayout from "./fittingProduct/IronLayout";
 import WedgeLayout from "./fittingProduct/WedgeLayout";
 import UtilityLayout from "./fittingProduct/UtilityLayout";
+import PutterLayout from "./fittingProduct/PutterLayout";
 import SEOMetaTag from "../SEOMetaTag";
 
 function TabPanel(props) {
@@ -58,8 +59,9 @@ function Fitting() {
         xs: 0,
         sm: 600,
         md: 900,
-        lg: 1800,
-        xl: 2300,
+        lg: 1200,
+        xl: 1800,
+        xxl: 2300,
       },
     },
   });
@@ -90,20 +92,22 @@ function Fitting() {
               xs: "40px",
               sm: "100px",
               md: "150px",
-              xl: "200px",
+              xxl: "200px",
             },
             marginLeft: {
               xs: "10px",
               sm: "40px",
-              md: "300px",
-              xl: "440px",
+              md: "50px",
+              lg: "100px",
+              xl: "300px",
+              xxl: "440px",
             },
             color: "#fff",
             maxWidth: {
               xs: "356px",
               sm: "800px",
               md: "1800px",
-              xl: "2400px",
+              xxl: "2400px",
             },
             justifyContent: "left",
           }}
@@ -120,6 +124,7 @@ function Fitting() {
             <Tab label="UTILITY" {...a11yProps(2)} />
             <Tab label="IRON" {...a11yProps(3)} />
             <Tab label="WEDGE" {...a11yProps(4)} />
+            <Tab label="PUTTER" {...a11yProps(5)} />
           </Tabs>
           <TabPanel value={value} index={0}>
             <DriverLayout />
@@ -135,6 +140,9 @@ function Fitting() {
           </TabPanel>
           <TabPanel value={value} index={4}>
             <WedgeLayout />
+          </TabPanel>
+          <TabPanel value={value} index={5}>
+            <PutterLayout />
           </TabPanel>
         </Box>
       </ThemeProvider>

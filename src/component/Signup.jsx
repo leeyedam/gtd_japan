@@ -25,7 +25,8 @@ function Signup() {
         sm: 600,
         md: 900,
         lg: 1200,
-        xl: 2600,
+        xl: 1800,
+        xxl: 2600,
       },
     },
   });
@@ -94,29 +95,31 @@ function Signup() {
           columns={{ xs: 6, sm: 12, md: 12, lg: 12, xl: 12 }}
           sx={{
             minheight: "100vh",
+            height: { xxl: "100vh" },
             marginTop: {
               xs: "70px",
               sm: "80px",
               md: "200px",
-              lg: "200px",
-              xl: "330px",
+              xl: "200px",
+              xxl: "0px",
             },
             marginBottom: {
               sm: "50px",
-              lg: "200px",
-              xl: "310px",
+              md: "200px",
+              xl: "200px",
+              xxl: "0px",
             },
           }}
           justifyContent={"center"}
           alignContent={"center"}
         >
-          <Grid item xs={4.5} sm={8} md={6} lg={5} xl={4}>
+          <Grid item xs={4.5} sm={8} md={7} xl={4} xxl={4}>
             <Box
               sx={{
                 padding: {
                   sm: "90px 0px",
-                  lg: "90px 0px",
-                  xl: "200px 120px",
+                  xl: "90px 0px",
+                  xxl: "200px 120px",
                 },
                 border: { xs: "none", sm: ".8px solid #fff" },
                 borderRadius: "10px",
@@ -155,8 +158,8 @@ function Signup() {
                     xs={6}
                     sm={8}
                     md={6}
-                    lg={5}
-                    xl={4}
+                    xl={7}
+                    xxl={4}
                     justifyContent={"center"}
                   >
                     <Typography component={"h2"}>이메일</Typography>

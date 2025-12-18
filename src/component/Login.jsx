@@ -22,7 +22,8 @@ function Login() {
         sm: 600,
         md: 900,
         lg: 1200,
-        xl: 2600,
+        xl: 1800,
+        xxl: 2600,
       },
     },
   });
@@ -108,13 +109,13 @@ function Login() {
           justifyContent={"center"}
           alignContent={"center"}
         >
-          <Grid item xs={4} sm={7} md={4} lg={3} xl={2.5}>
+          <Grid item xs={4} sm={7} md={7} xl={3} xxl={2.5}>
             <Box
               sx={{
                 padding: {
                   sm: "90px 80px",
-                  lg: "90px 60px",
-                  xl: "250px 120px",
+                  xl: "90px 60px",
+                  xxl: "250px 120px",
                 },
                 border: { xs: "none", sm: ".8px solid #fff" },
                 borderRadius: "10px",
@@ -172,14 +173,14 @@ function Login() {
                     sx={{
                       display: "flex",
                       marginBottom: { xs: "6px", sm: "10px" },
-                      fontSize: { xs: "14px", xl: "20px" },
+                      fontSize: { xs: "14px", xxl: "20px" },
                     }}
                   >
                     <Typography
                       component={"p"}
                       sx={{
                         color: "#fff",
-                        fontSize: { xs: "14px", xl: "20px" },
+                        fontSize: { xs: "14px", xxl: "20px" },
                       }}
                     >
                       아직 회원이 아니신가요?
@@ -189,14 +190,14 @@ function Login() {
                   <Box
                     sx={{
                       display: "flex",
-                      fontSize: { xs: "14px", xl: "20px" },
+                      fontSize: { xs: "14px", xxl: "20px" },
                     }}
                   >
                     <Typography
                       component={"p"}
                       sx={{
                         color: "#fff",
-                        fontSize: { xs: "14px", xl: "20px" },
+                        fontSize: { xs: "14px", xxl: "20px" },
                       }}
                     >
                       비밀번호를 잊으셨나요?
