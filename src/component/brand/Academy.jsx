@@ -138,10 +138,11 @@ function Academy() {
               textAlign: "right",
             }}
           >
-            이후 2012년에 GTD(George Takei Design)브랜드를 탄생시키면서 클럽
-            제작과 아마추어 및 주니어들을 육성하는 GTD Academy를 함께
-            설립하였으며, JPGA와 JLPGA 프로들을 코치하며, 'Team George'를
-            만들었다.
+            その後、2012年に GTD（George Takei Design）
+            ブランドを立ち上げると同時に、クラブ製作とアマチュアおよびジュニアゴルファーの育成を行う
+            GTDアカデミー を設立しました。 また、JPGA（日本プロゴルフ協会）
+            および JLPGA（日本女子プロゴルフ協会）
+            のプロ選手たちを指導し、「Team George」 を結成しました。
           </Typography>
           <Typography
             position="absolute"
@@ -160,10 +161,14 @@ function Academy() {
               textAlign: "left",
             }}
           >
-            이후 2012년에 GTD(George Takei Design)브랜드를 <br /> 탄생시키면서
-            클럽 제작과 아마추어 및 주니어들을 <br /> 육성하는 GTD Academy를
-            함께 설립하였으며, JPGA와 JLPGA 프로들을 코치하며, 'Team George'를
-            만들었다.
+            その後、2012年に GTD（George Takei Design）
+            ブランドを立ち上げると同時に、
+            <br />
+            クラブ製作とアマチュアおよびジュニアゴルファーの育成を行う
+            GTDアカデミー を設立しました。 <br />
+            また、JPGA（日本プロゴルフ協会） および
+            JLPGA（日本女子プロゴルフ協会） のプロ選手たちを指導し、「Team
+            George」 を結成しました。
           </Typography>
         </Grid>
       </Grid>

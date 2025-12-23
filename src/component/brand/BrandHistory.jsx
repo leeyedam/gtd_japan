@@ -81,7 +81,7 @@ function BrandHistory() {
                 xl: "82px",
               },
               lineHeight: { xs: "36px", sm: "46px", md: "54px", lg: "95px" },
-              marginTop: { xs: "60px", sm: "80px", lg: "150px" },
+              marginTop: { xs: "60px", sm: "36px", lg: "150px" },
               marginBottom: { xs: "250px", sm: "25px", md: "25px" },
               textAlign: { xs: "center", sm: "left", md: "left" },
               top: { xs: "3%", sm: "5%", md: "10%", lg: "15%" },
@@ -103,34 +103,29 @@ function BrandHistory() {
             position="absolute"
             sx={{
               display: { xs: "none", sm: "flex", md: "flex" },
-              maxWidth: { xs: "320px", sm: "500px", md: "600px", lg: "710px" },
+              maxWidth: { xs: "320px", sm: "484px", md: "600px", lg: "800px" },
               fontSize: { xs: "14px", md: "16px", lg: "18px" },
-              lineHeight: { lg: "35px" },
+              lineHeight: { lg: "34px" },
               marginBottom: { md: "20px" },
               fontWeight: { md: 500 },
-              top: { sm: "56%", lg: "65%" },
+              top: { sm: "44%", lg: "64%" },
               left: { sm: "20%", lg: "20%", xl: "22%", xxl: "27%" },
             }}
             style={subTitleFontStyle}
           >
             GTD創立者でありクラブデザイナー、日本ゴルフ界の“三大匠”の一人である
-            <br /> ジョージ・タケイ
-            は、1990年にカリフォルニアでゴルフクラブの開発とデザインを学び、
+            ジョージ・タケイは、
+            <br />
+            1990年にカリフォルニアでゴルフクラブの開発とデザインを学び、
             <br />
             1997年には日本で初めて「ゲージデザイン（Gauge
-            Design）」というブランドを立ち上げ
-            <br />
-            た創業者です。 2007年には「ジョージスピリット（George
+            Design）」というブランドを立ち上げ た創業者です。
+            2007年には「ジョージスピリット（George
             Spirit）」というブランドを設立し、
-            <br />
             韓国国内でセンセーションを巻き起こした サクラエディション
-            を成功させました。
-            <br />
-            プロにとってはツアーでの“最強の武器”、
-            <br />
+            を成功させました。 プロにとってはツアーでの“最強の武器”、
             アマチュアにとっては“夢の杖（Dream
             Stick）”となるクラブを作ることこそが、
-            <br />
             彼がGTDを開発する目的なのです。
           </Typography>
           <Typography

@@ -116,12 +116,13 @@ function ThirdSection() {
                   color: "#626262",
                 }}
               >
-                BLACK ICE 저변에 깔린 잠재적인 두려움
-                <br /> 두려움을 극복하는 완벽한 샷의 시작
-                <br /> 일본 천재 디자이너가 만들어낸 클럽의 기능을 극대화한
-                풀티탄 소재의
-                <br /> 폭발적 퍼포먼스 GTD BLACK ICE SERIES로 필드에서 직접
-                경험해보세요.
+                BLACK ICEそこに潜む“潜在的な恐れ”
+                <br /> その恐れを克服する、完璧なショットの始まり。
+                <br />
+                日本の天才デザイナーが生み出したクラブ性能を最大限に引き出す
+                <br /> フルチタン素材の爆発的パフォーマンス・GTD BLACK ICE
+                SERIES を、
+                <br /> フィールドでぜひ直接体感してください。
               </Typography>
               <Typography
                 sx={{
@@ -138,12 +139,13 @@ function ThirdSection() {
                   justifyContent: "center",
                 }}
               >
-                BLACK ICE 저변에 깔린 잠재적인 두려움
-                <br /> 두려움을 극복하는 완벽한 샷의 시작
-                <br /> 일본 천재 디자이너가 만들어낸 클럽의 기능을 <br />
-                극대화한 풀티탄 소재의
-                <br /> 폭발적 퍼포먼스 GTD BLACK ICE SERIES로 <br /> 필드에서
-                직접 경험해보세요.
+                BLACK ICEそこに潜む“潜在的な恐れ”
+                <br /> その恐れを克服する、完璧なショットの始まり。
+                <br />
+                日本の天才デザイナーが生み出したクラブ性能を最大限に引き出す
+                <br /> フルチタン素材の爆発的パフォーマンス・GTD BLACK ICE
+                SERIES を、
+                <br /> フィールドでぜひ直接体感してください。
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={5}>
